@@ -9,7 +9,6 @@ To use this for your own data, you'll need to install these packages:
 * <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>
 * <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a>
 
-Then make sure that the data you want to analyze is in the same folder of the script.
 When you run the program, you'll see a set of easy instructions to follow:
 
 + Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
@@ -33,6 +32,8 @@ Then you can choose sample means and values to see how far they are from the mea
 - **Z-table value for that score**
 - **Probability of getting that value**
 - **Graph for sample distribution**
+
+* * *
 
 You can download **scores.txt** to test the script.
 Demo:
