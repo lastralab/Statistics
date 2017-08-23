@@ -39,6 +39,7 @@ Code:
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
 # Author: Tania M. Molina - UY/2017
+# MIT License
 
 import math
 import numpy as np
