@@ -36,7 +36,7 @@ Then you can choose sample means and values to see how far they are from the mea
 * * *
 
 You can download **scores.txt** to test the script :ballot_box_with_check:
-<br>
+<br><br>
 Demo:
 
 <img src="https://user-images.githubusercontent.com/22894897/29621696-dff67942-87f7-11e7-8eb9-e051e22e0820.gif" width="100%">
