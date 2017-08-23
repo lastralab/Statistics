@@ -10,7 +10,12 @@ To use this for your own data, you'll need to install these packages:
 - <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a>
 
 Then make sure that the data you want to analyze is in the same folder of the script.
-When you run the program, you'll see a set of easy instructions to follow.
+When you run the program, you'll see a set of easy instructions to follow:
+
+-- Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
+-- To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
+-- Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.
+
 You'll get:
 
 - **N**
