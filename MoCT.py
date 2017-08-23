@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-#by Tania M. Molina 
+#by Tania M. Molina - UY/2017
 import math
 import numpy as np
 import pandas as pd
