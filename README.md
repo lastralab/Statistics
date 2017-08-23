@@ -3,17 +3,17 @@
 
 To use this for your own data, you'll need to install these packages:
 
-1. <a href="https://docs.python.org/2/library/math.html" window="_blank">math</a>
-2. <a href="https://pypi.python.org/pypi/numpy" target="_blank">numpy</a>
-3. <a href="https://pypi.python.org/pypi/pandas/0.20.3" target="_blank">pandas</a>
-4. <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>
-5. <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a>
+:package: <a href="https://docs.python.org/2/library/math.html" window="_blank">math</a>
+:package: <a href="https://pypi.python.org/pypi/numpy" target="_blank">numpy</a>
+:package: <a href="https://pypi.python.org/pypi/pandas/0.20.3" target="_blank">pandas</a>
+:package: <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>
+:package: <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a>
 
 When you run the program, you'll see a set of easy instructions to follow:
 
-:runner: Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.  
-:runner: To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).  
-:runner: Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
+:octocat: Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.  
+:octocat: To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).  
+:octocat: Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
 
 After entering the name of the file you want to analyze, you'll get:
 
@@ -23,7 +23,7 @@ After entering the name of the file you want to analyze, you'll get:
 - **Variance**
 - **Population Standard Deviation**
 - **Standard Error**
-- **Graph for population distribution**
+- **Graph for population distribution**:chart_with_downwards_trend:
 
 Then you can choose sample means and values to see how far they are from the mean... and get:
 
@@ -31,7 +31,7 @@ Then you can choose sample means and values to see how far they are from the mea
 - **Z-score**
 - **Z-table value for that score**
 - **Probability of getting that value**
-- **Graph for sample distribution**
+- **Graph for sample distribution**:chart_with_upwards_trend:
 
 * * *
 
