@@ -32,7 +32,9 @@ Then you can choose sample means and values to see how far they are from the mea
 - **Standard Error for each sample**  
 - **Z-score**  
 - **Z-table value for that score**  
-- **Probability of getting that value**  
+- **Probability of getting that value** 
+- **Confidence interval**
+- **Margin of error**
 - :chart_with_upwards_trend: **Graph for sample distribution**  
 
 * * *
