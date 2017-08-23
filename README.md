@@ -3,11 +3,11 @@ Retrieving, Processing, and Visualizing Data with Python
 
 To use this for your own data, you'll need to install these packages:
 
-- **math**
-- **numpy**
-- **pandas**
-- **scipy**
-- **matplotlib**
+- <a href="https://docs.python.org/2/library/math.html">math</a>
+- <a href="https://pypi.python.org/pypi/numpy">numpy</a>
+- <a href="https://pypi.python.org/pypi/pandas/0.20.3">pandas</a>
+- <a href="https://pypi.python.org/pypi/scipy/0.19.1">scipy</a>
+- <a href="https://pypi.python.org/pypi/matplotlib/2.0.2">matplotlib</a>
 
 Then make sure that the data you want to analyze is in the same folder of the script.
 When you run the program, you'll see a set of easy instructions to follow.
