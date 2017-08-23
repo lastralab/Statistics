@@ -39,7 +39,7 @@ You can download <a href="https://github.com/TaniaMol/Statistics/blob/master/sco
 <br><br>
 Demo:
 
-<img src="https://user-images.githubusercontent.com/22894897/29621696-dff67942-87f7-11e7-8eb9-e051e22e0820.gif" width="100%">
+<img src="https://user-images.githubusercontent.com/22894897/29637224-dcaffb0a-8829-11e7-93cb-f941ac1dda78.gif" width="100%">
 <br>
 Draft code (See <a href="https://github.com/TaniaMol/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the code below):  
 
