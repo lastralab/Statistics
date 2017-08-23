@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-#by Tania M. Molina - UY/2017
+# Author: Tania M. Molina - UY/2017
+# MIT License
 import math
 import numpy as np
 import pandas as pd
