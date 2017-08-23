@@ -3,7 +3,7 @@ Retrieving, Processing, and Visualizing Data with Python
 
 To use this for your own data, you'll need to install these packages:
 
-- <a href="https://docs.python.org/2/library/math.html" [attr.target]="target">math</a>
+- <a href="https://docs.python.org/2/library/math.html" target="_blank">math</a>
 - <a href="https://pypi.python.org/pypi/numpy" target="_blank">numpy</a>
 - <a href="https://pypi.python.org/pypi/pandas/0.20.3" target="_blank">pandas</a>
 - <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>
