@@ -1,6 +1,8 @@
 # MoCT.py
 **Retrieving, Processing, and Visualizing Data with Python**
 
+<b><u>Capstone project</u></b>: To write a program that can read data, analyze it and visualize the results.
+
 To use this for your own data, you'll need to install these packages:
 
 :package: <a href="https://docs.python.org/2/library/math.html" window="_blank">math</a>  
