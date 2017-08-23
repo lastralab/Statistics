@@ -9,13 +9,11 @@ To use this for your own data, you'll need to install these packages:
 :package: <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>  
 :package: <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a>  
 
-When you run the program, you'll see a set of easy instructions to follow:
+- When you run the program, you'll see a set of easy instructions to follow:
 
-- Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
-<br>
-- To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
-<br>
-- Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
+    - Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
+    - To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
+    - Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
 
 After entering the name of the file you want to analyze, you'll get:
 
@@ -42,7 +40,6 @@ Demo:
 
 <img src="https://user-images.githubusercontent.com/22894897/29621696-dff67942-87f7-11e7-8eb9-e051e22e0820.gif" width="100%">
 
-/play tada
 Code:
 ```Python
 # -*- coding: utf-8 -*-
