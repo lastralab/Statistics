@@ -15,7 +15,7 @@ When you run the program, you'll see a set of easy instructions to follow:
 + To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
 + Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.
 
-You'll get:
+After entering the name of the file you want to analyze, you'll get:
 
 - **N**
 - **Mean**
