@@ -52,7 +52,7 @@ StdE = StdDev / math.sqrt(n) #Standard Error
 print ('---------------------------------------------')
 print ('MEASURES OF CENTRAL TENDENCY for:'), fhand
 print (' ')
-print ('n ='), n
+print ('N ='), n
 print ('Mean ='), mean
 print ('Sum of Squares ='), SS
 print ('Variance ='), Var
