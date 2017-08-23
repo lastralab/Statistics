@@ -1,7 +1,7 @@
 # MoCT.py
 **Retrieving, Processing, and Visualizing Data with Python**
 
-<b><u>Capstone project</u></b>: To write a program that can read data, analyze it and visualize the results.
+<b><u>Capstone project</u></b>: To write a program that can read, analyze and visualize data, using the skills from the course, and apply statistics knowledge to get results from a real project. 
 
 To use this for your own data, you'll need to install these packages:
 
