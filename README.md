@@ -39,7 +39,7 @@ You can download <a href="https://github.com/TaniaMol/Statistics/blob/master/sco
 <br><br>
 Demo:
 
-<img src="https://user-images.githubusercontent.com/22894897/29637224-dcaffb0a-8829-11e7-93cb-f941ac1dda78.gif" width="100%">
+<img src="https://user-images.githubusercontent.com/22894897/29638445-b0a8abf2-882d-11e7-920d-362fb643a2ff.gif" width="100%">
 <br>
 Code <i>preview</i> (See <a href="https://github.com/TaniaMol/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the code below):  <br><br>
 
@@ -161,8 +161,5 @@ print 'It was a pleasure to make your life easier,\nHasta la vista, baby!'
 print(' ')
 ```
 <br>
-<b><i>Slower demo:</i></b>
-<br><br>
-<img src="https://user-images.githubusercontent.com/22894897/29638445-b0a8abf2-882d-11e7-920d-362fb643a2ff.gif" width="100%">
-<br><br>
+<br>
 <p align="center">Powered by <b>L'Astra Lab<b><br><a href="https://taniamol.github.io/website/" target="_blank"><br><button><img src="http://i.imgur.com/IvXPn8z.png" alt="l'astra lab icon" width="50px" background="transparent" opacity="0.5" padding="0;"/></button></a></p><br><br>
