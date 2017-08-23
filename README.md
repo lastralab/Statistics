@@ -136,6 +136,7 @@ while True:
     greater = 1 - pvalue
     print 'The probability of getting at least', anyvalue,'is:'
     print 'p =', greater
+    print 'p = ', greater*100, '%'
     print('---------------------------------------------')
     pdf2 = stats.norm.pdf(Array, mean, newdeviation)
     fig2 = plt.plot(Array, pdf2)
