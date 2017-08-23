@@ -17,20 +17,20 @@ When you run the program, you'll see a set of easy instructions to follow:
 
 After entering the name of the file you want to analyze, you'll get:
 
-- **N**
-- **Mean**
-- **Sum of squares**
-- **Variance**
-- **Population Standard Deviation**
-- **Standard Error**
+- **N**  
+- **Mean**  
+- **Sum of squares**  
+- **Variance**  
+- **Population Standard Deviation**  
+- **Standard Error**  
 :chart_with_downwards_trend: **Graph for population distribution**  
 
 Then you can choose sample means and values to see how far they are from the mean... and get:
 
-- **Standard Error for each sample**
-- **Z-score**
-- **Z-table value for that score**
-- **Probability of getting that value**
+- **Standard Error for each sample**  
+- **Z-score**  
+- **Z-table value for that score**  
+- **Probability of getting that value**  
 :chart_with_upwards_trend: **Graph for sample distribution**  
 
 * * *
