@@ -3,11 +3,11 @@
 
 To use this for your own data, you'll need to install these packages:
 
-:package: <a href="https://docs.python.org/2/library/math.html" window="_blank">math</a>
-:package: <a href="https://pypi.python.org/pypi/numpy" target="_blank">numpy</a>
-:package: <a href="https://pypi.python.org/pypi/pandas/0.20.3" target="_blank">pandas</a>
-:package: <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>
-:package: <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a>
+:package: <a href="https://docs.python.org/2/library/math.html" window="_blank">math</a>  
+:package: <a href="https://pypi.python.org/pypi/numpy" target="_blank">numpy</a>  
+:package: <a href="https://pypi.python.org/pypi/pandas/0.20.3" target="_blank">pandas</a>  
+:package: <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>  
+:package: <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a>  
 
 When you run the program, you'll see a set of easy instructions to follow:
 
