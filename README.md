@@ -41,7 +41,7 @@ Demo:
 
 <img src="https://user-images.githubusercontent.com/22894897/29621696-dff67942-87f7-11e7-8eb9-e051e22e0820.gif" width="100%">
 <br>
-Draft code (See **MoCT.py**, which will be constantly updated, not the code below):  
+Draft code (See <b>MoCT.py<b>, which will be constantly updated, not the code below):  
 
 ```Python
 # -*- coding: utf-8 -*-
