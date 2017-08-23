@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-# Author: Tania M. Molina - UY/2017
+# Author: Tania M. Molina
+# UY - 2017
 # MIT License
 import math
 import numpy as np
-import pandas as pd
+import pandas as pd #will be used soon
 from scipy import stats
 from scipy.stats import norm
 import scipy.stats as stats
@@ -78,10 +79,10 @@ while True:
         break
     newn = float(fh)
     newdeviation = StdDev / math.sqrt(newn)
-    print(' ')
+    print('----------------------------------------------------------------')
     print 'The Standard Error for', newn,'is: ', newdeviation
-    print('------------------------------------------------------')
-    print(' ')
+    print('----------------------------------------------------------------')
+    print ' '
     anyvalue = raw_input('Enter a value to see how far it is from the mean: ')
     if anyvalue[0] == '#':
         continue
@@ -99,13 +100,26 @@ while True:
     greater = 1 - pvalue
     print 'The probability of getting at least', anyvalue,'is:'
     print 'p =', greater
-    print 'p =', greater*100, '%'
-    print('---------------------------------------------')
-    pdf2 = stats.norm.pdf(Array, mean, newdeviation)
+    percent = greater * 100
+    print 'p =', round(percent), '%'
+    Devs = (2 * newdeviation)
+    print '---------------------------------------------'
+    print 'Approximately 95% of the sample means fall within\n', Devs, 'of', mean, '(Population mean)'
+    Dev1 = newmean - Devs
+    Dev2 = newmean + Devs
+    print ' '
+    print 'The 95% Confidence interval is:', Dev1,'<', newmean, '<', Dev2
+    print ' '
+    print 'Margin of error =', Devs
+    print '---------------------------------------------'
+    pdf2 = stats.norm.pdf(Array, newmean, Devs)
     fig2 = plt.plot(Array, pdf2)
     plt.title("Sampling distribution")
     plt.xlabel("Value")
     plt.ylabel("Frequency")
+    plt.axvline(x= newmean, color='r', linestyle='dashed')
+    plt.axvline(x= Dev1, color ='g', linestyle='dashed')
+    plt.axvline(x= Dev2, color = 'g', linestyle='dashed')
     print ('To continue, you must save the figure and close it, or just close it.\n')
     plt.show(fig2)
     continue
