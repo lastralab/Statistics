@@ -1,5 +1,5 @@
 # MoCT.py
-Retrieving, Processing, and Visualizing Data with Python
+**Retrieving, Processing, and Visualizing Data with Python**
 
 To use this for your own data, you'll need to install these packages:
 
@@ -149,4 +149,4 @@ print(' ')
 print 'It was a pleasure to make your life easier,\nHasta la vista, baby!'
 print(' ')
 ```
-L'Astra Lab
+<a href="http://taniamol.github.io/website/index.html">L'Astra Lab</a>
