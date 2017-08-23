@@ -35,13 +35,13 @@ Then you can choose sample means and values to see how far they are from the mea
 
 * * *
 
-You can download **scores.txt** to test the script :ballot_box_with_check:
+You can download <a href="https://github.com/TaniaMol/Statistics/blob/master/scores.txt"><b>scores.txt</b></a> to test the script :ballot_box_with_check:
 <br><br>
 Demo:
 
 <img src="https://user-images.githubusercontent.com/22894897/29621696-dff67942-87f7-11e7-8eb9-e051e22e0820.gif" width="100%">
 <br>
-Draft code (See <b>MoCT.py</b>, which will be constantly updated, not the code below):  
+Draft code (See <a href="https://github.com/TaniaMol/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the code below):  
 
 ```Python
 # -*- coding: utf-8 -*-
