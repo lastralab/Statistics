@@ -160,4 +160,4 @@ print(' ')
 print 'It was a pleasure to make your life easier,\nHasta la vista, baby!'
 print(' ')
 ```
-<p align="right" font-size="8px">Powered by <a href="http://taniamol.github.io/website/index.html">L'Astra Lab</a>.</p>
+<p align="center">Powered by <b>L'Astra Lab<b><br><a href="https://taniamol.github.io/website/" target="_blank"><button><img src="http://i.imgur.com/IvXPn8z.png" alt="l'astra lab icon" width="50px" background="transparent" opacity="0.5" padding="0;"/></button></a></p><br>
