@@ -23,7 +23,7 @@ After entering the name of the file you want to analyze, you'll get:
 - **Variance**
 - **Population Standard Deviation**
 - **Standard Error**
-- **Graph for population distribution**:chart_with_downwards_trend:
+:chart_with_downwards_trend: **Graph for population distribution**  
 
 Then you can choose sample means and values to see how far they are from the mean... and get:
 
@@ -31,7 +31,7 @@ Then you can choose sample means and values to see how far they are from the mea
 - **Z-score**
 - **Z-table value for that score**
 - **Probability of getting that value**
-- **Graph for sample distribution**:chart_with_upwards_trend:
+:chart_with_upwards_trend: **Graph for sample distribution**  
 
 * * *
 
