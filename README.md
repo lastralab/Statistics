@@ -11,9 +11,9 @@ To use this for your own data, you'll need to install these packages:
 
 When you run the program, you'll see a set of easy instructions to follow:
 
-+ Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
-+ To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
-+ Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.
+:runner: Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
+:runner: To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
+:runner: Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.
 
 After entering the name of the file you want to analyze, you'll get:
 
