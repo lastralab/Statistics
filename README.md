@@ -9,7 +9,7 @@ To use this for your own data, you'll need to install these packages:
 - scipy
 - matplotlib
 
-Then make sure that the data you want to analize is in the same folder of the script.
+Then make sure that the data you want to analyze is in the same folder of the script.
 When you run the program, you'll see a set of easy instructions to follow.
 You'll get:
 
