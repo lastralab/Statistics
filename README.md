@@ -11,11 +11,11 @@ To use this for your own data, you'll need to install these packages:
 
 When you run the program, you'll see a set of easy instructions to follow:
 
-:octocat: Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
+- Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
 <br>
-:octocat: To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
+- To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
 <br>
-:octocat: Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
+- Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
 
 After entering the name of the file you want to analyze, you'll get:
 
@@ -42,6 +42,7 @@ Demo:
 
 <img src="https://user-images.githubusercontent.com/22894897/29621696-dff67942-87f7-11e7-8eb9-e051e22e0820.gif" width="100%">
 
+/play tada
 Code:
 ```Python
 # -*- coding: utf-8 -*-
