@@ -15,6 +15,7 @@ To use this for your own data, you'll need to install these packages:
 
     - Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
     - To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
+    - The name of the file will be the legend on the first plot, I recommend you to choose the name wisely.  
     - Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
 
 After entering the name of the file you want to analyze, you'll get:
