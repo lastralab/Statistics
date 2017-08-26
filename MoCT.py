@@ -107,36 +107,42 @@ while True:
     percent = greater * 100
     print 'p =', percent,'%'
     Devs = (1.96 * newdeviation)
-    print '---------------------------------------------'
+    print '--------------------------------------------------------------'
     print 'Approximately 95% of the sample means fall within', Devs, '\nof', mean, '(Population mean)'
-    Dev1 = newmean - Devs
-    Dev2 = newmean + Devs
+    Dev1 = mean - Devs
+    Dev2 = mean + Devs
     print ' '
     print 'The 95% confidence interval is:', Dev1,'<', newmean, '<', Dev2
     print ' '
     Devss = (2.33 * newdeviation)
-    Dev3 = newmean - Devss
-    Dev4 = newmean + Devss
+    Dev3 = mean - Devss
+    Dev4 = mean + Devss
     print 'The 98% confidence interval is:', Dev3,'<', newmean, '<', Dev4
-    print '---------------------------------------------'
-    pdf2 = stats.norm.pdf(Array, newmean, Devs)
+    print ' '
+    print 'The margin of error is:', Devs, 'for 95% and:', Devss,'for 98%'
+    print '--------------------------------------------------------------'
+    pdf2 = stats.norm.pdf(Array, mean, StdDev)
     altn = int(newn)
-    legen = ("n= "+str(altn))
+    legen = ("n = "+str(altn))
     fig2 = plt.plot(Array, pdf2, label=legen)
-    plt.title("Sampling distribution + Confidence intervals: 95%(green) 98%(orange)")
+    plt.title("Sampling distribution + 95% Confidence interval")#or 98%
     plt.xlabel("Value")
     plt.ylabel("Frequency")
-    altm = str(newmean)
-    legenda = ("mean= "+altm)
-    plt.axvline(x= newmean, color='r', linestyle='dashed', label=legenda)
+    altm = str(mean)
+    legenda = ("Mean =\n "+altm)
+    plt.axvline(x= mean, color='r', linestyle='dashed', label=legenda)
     plt.axvline(x= Dev1, color ='g', linestyle='dashed', label=Dev1)
     plt.axvline(x= Dev2, color = 'g', linestyle='dashed', label=Dev2)
-    plt.axvline(x= Dev3, color = 'orange', linestyle='dashed', label=Dev3)
-    plt.axvline(x= Dev4, color = 'orange', linestyle='dashed', label=Dev4)
+    zscorev = mean+(zscore*newdeviation)
+    zscor = ("z-score =\n"+str(zscore))
+    plt.axvline(x= zscorev, color = 'purple', label=zscor)
+    # Uncomment next two lines for 98% confidence interval
+    #plt.axvline(x= Dev3, color = 'orange', linestyle='dashed', label=Dev3)
+    #plt.axvline(x= Dev4, color = 'orange', linestyle='dashed', label=Dev4)
     print ('To continue, you must save the figure and close it, or just close it.\n')
     plt.legend()
     plt.show(fig2)
     continue
 print(' ')
-print 'It was a pleasure to make your life easier,\nHasta la vista, baby.'
+print 'It was a pleasure to make your life easier.\nHasta la vista, baby.'
 print(' ')
