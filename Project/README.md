@@ -5,4 +5,6 @@ Exploring data and testing <a href="https://github.com/TaniaMol/Statistics/blob/
 <p align="center"><img src="https://user-images.githubusercontent.com/22894897/30129525-8750aecc-931c-11e7-9ce7-d923cef78041.gif" width="100%"></p>
 
 
+First result: There is a significant difference between the environmental activities that women and men do.
+
 More contents coming soon...
