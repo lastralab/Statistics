@@ -40,13 +40,13 @@ Then you can choose sample means and values to see how far they are from the mea
 
 * * *
 
-You can download <a href="https://github.com/TaniaMol/Statistics/blob/master/scores.txt"><b>scores.txt</b></a> to test the script :ballot_box_with_check:
+You can download <a href="https://github.com/lastralab/Statistics/blob/master/scores.txt"><b>scores.txt</b></a> to test the script :ballot_box_with_check:
 <br><br>
 Demo:
 
 <img src="https://user-images.githubusercontent.com/22894897/29638445-b0a8abf2-882d-11e7-920d-362fb643a2ff.gif" width="100%">
 <br>
-Code <i>preview</i> (See <a href="https://github.com/TaniaMol/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the code below):  <br><br>
+Code <i>preview</i> (See <a href="https://github.com/lastralab/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the code below):  <br><br>
 
 ```Python
 # -*- coding: utf-8 -*-
