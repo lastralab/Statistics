@@ -162,7 +162,7 @@ while True:
     plt.show(fig2)
     continue
 print(' ')
-print 'It was a pleasure to make your life easier,\nHasta la vista, baby!'
+print 'Ciao, baby!'
 print(' ')
 ```
 <br>
