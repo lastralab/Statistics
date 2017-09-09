@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-# Author: Tania M. Molina
+# Author: Niam Moltta
 # UY - 2017
 # MIT License
 import math
