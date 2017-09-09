@@ -51,7 +51,7 @@ Code <i>preview</i> (See <a href="https://github.com/lastralab/Statistics/blob/m
 ```Python
 # -*- coding: utf-8 -*-
 #!/usr/bin/python
-# Author: Tania M. Molina - UY/2017
+# Author: Niam Moltta - UY/2017
 # MIT License
 
 import math
