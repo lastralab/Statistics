@@ -22,7 +22,7 @@ print('           Welcome to MoCT.py')
 print('           --by Niam Moltta--')
 print(' ')
 print(' ')
-print("INSTRUCTIONS:\n \n- Make sure that the .csv file is in the same folder of this script, otherwise it won't be found.\n- To start, enter the name of the file without 'quotes' and ending with .txt (example: scores.csv).\n- The name of the file will be the legend on the first plot, I recommend you to choose the name wisely.\n- Later, when you are done selecting columns to analyze or values for sample distribution, enter 'ya' and the program will finish nicely. \n")
+print("INSTRUCTIONS:\n \n- Make sure that the .csv file is in the same folder of this script, otherwise it won't be found.\n- To start, enter the name of the file without 'quotes' and ending with .csv (example: scores.csv).\n- The name of the file will be the legend on the first plot, I recommend you to choose the name wisely.\n- Later, when you are done selecting columns to analyze or values for sample distribution, enter 'ya' and the program will finish nicely. \n")
 
 fhand = raw_input('Enter file name: ')
 
