@@ -73,6 +73,41 @@ while True:
             print ' '
             print 'p-value =', Pear[1]
             print ' '
+            
+        Coef = Pear[0]
+        pval = Pear[1]
+
+        r2 = str(Coef)
+        p = str(pval)
+        pvalue = 'p-value = '+ p
+        R2 = "Pearson's = "+ r2
+
+        xcums = np.cumsum(x)
+        ycums = np.cumsum(y)
+
+        yc = sorted(ycums, reverse=True)
+
+        if Coef < 0 :
+            
+            plt.plot(xcums, 'b', label=column1)
+            plt.plot(yc, 'r', label=column2)
+            plt.title(R2)
+            plt.xlabel(pvalue)
+            plt.ylabel("Correlation")
+            print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
+            plt.legend()
+            plt.show()
+            print ' '
+        else:
+            plt.plot(xcums, 'b', label=column1)
+            plt.plot(ycums, 'r', label=column2)
+            plt.title(R2)
+            plt.xlabel(pvalue)
+            plt.ylabel("Correlation")
+            print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
+            plt.legend()
+            plt.show()
+            print ' '
 
 '''The Pearson correlation coefficient measures the linear relationship
  between two datasets. Strictly speaking, Pearson's correlation requires
