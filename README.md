@@ -42,7 +42,6 @@ Then you can choose sample means and values to see how far they are from the mea
 
 * * *
 
-You can download <a href="https://github.com/lastralab/Statistics/blob/master/scores.txt"><b>scores.txt</b></a> to test the script :ballot_box_with_check:
 <br><br>
 Demo:
 
