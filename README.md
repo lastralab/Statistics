@@ -15,10 +15,10 @@ To use this for your own data, you'll need to install these packages:
 
 - When you run the program, you'll see a set of easy instructions to follow:
 
-    - Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.
-    - To start, enter the name of the file without "quotes" and ending with .txt (example: scores.txt).
+    - Make sure that the .csv file is in the same folder of this script, otherwise it won't be found.
+    - To start, enter the name of the file without "quotes" and ending with .txt (example: scores.csv).
     - The name of the file will be the legend on the first plot, I recommend you to choose the name wisely.  
-    - Later, when you are done selecting values for sample distribution, type "ya", hit Return and the program will finish nicely.  
+    - Later, when you are done selecting columns to analyze or values for sample distribution, enter "ya" and the program will finish nicely.  
 
 After entering the name of the file you want to analyze, you'll get:
 
@@ -48,7 +48,7 @@ Demo:
 
 <img src="https://user-images.githubusercontent.com/22894897/29638445-b0a8abf2-882d-11e7-920d-362fb643a2ff.gif" width="100%">
 <br>
-Code <i>preview</i> (See <a href="https://github.com/lastralab/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the code below):  <br><br>
+Code <i>preview</i> (See <a href="https://github.com/lastralab/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the example below):  <br><br>
 
 ```Python
 # -*- coding: utf-8 -*-
