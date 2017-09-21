@@ -3,6 +3,8 @@
 # Author: Niam Moltta
 # UY - 2017
 # MIT License
+# Two tailed T-test for differences of Means
+
 import math
 import numpy as np
 import pandas as pd
@@ -17,75 +19,44 @@ import scipy.stats
 import matplotlib.pyplot as mlab
 
 print ' '
-print '*----------------------------*'
-print '|                            |'
-print '|  Welcome to DepT-test.py   |'
-print '|                            |'
-print '*----------------------------*'
 print ' '
-print 'KEYWORDS: After you analyze the file, you can type other stuff instead of another file name, like:\n\n- "print", to see the Data Frame you just analyzed.\n- "graph", to see the dependent two tailed t-test.\n- "plot", to graph columns behavior, and finally:\n- "ya", to finish the program.\n'
+print '     *----------------------------*'
+print '     |                            |'
+print '     |  Welcome to DepT-test.py   |'
+print '     |    --by Niam Moltta--      |'
+print '     |                            |'
+print '     *----------------------------*'
+print ' '
+print ' '
+print 'INSTRUCTIONS:\n\nYou must run this program in the same folder of your data.'
+
+print ' '
+
+fh = raw_input('Enter .csv file name: ')
+fhand = str(fh) 
+
+if (fh == 'ya') | (fh == ''):
+    print ' '
+    print 'Hasta la vista, baby'
+    print ' '
+    exit()
+
+data = pd.read_csv(fhand, header=0)
+frame = pd.DataFrame(data)
 
 while True:
     
-    fhand = raw_input('Enter .csv file name or keyword: ')
+    print ' '
+    print '--------------------------------------------------------'
+    hand = raw_input('Enter first column header: ')
+    hand2 = raw_input('Enter second column header: ')
+    print '--------------------------------------------------------'
+    print ' '
 
-    if fhand == 'ya':
-        break
-    if fhand == 'print':
-        print frame
-        continue
-    if fhand == 'graph':
-        Array = sorted(Difs)
-        pdf2 = stats.norm.pdf(Array, 0, tvalue)
-        altn = int(nDifs)
-        legen = ("n = "+str(altn))
-        fig2 = plt.plot(Array, pdf2, label=legen)
-        plt.title("Differences of Means distribution")
-        plt.xlabel("Values")
-        altm = str(Avrg)
-        legenda = ("Mean =\n "+altm)
-        V1 = 0 - tvalue
-        V2 = 0 + tvalue
-        plt.axvline(x= 0, color='r', linestyle='dashed', label=legenda)
-        plt.axvline(x= V1, color ='g', linestyle='dashed', label=V1)
-        plt.axvline(x= V2, color = 'g', linestyle='dashed', label=V2)
-        score = ("t =\n"+str(tstat))
-        plt.axvline(x=tstat, color = 'purple', label=score)
-        print ' '
-        print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
-        plt.legend()
-        plt.show(fig2)
-        print ' '
-        continue
-    if fhand == 'plot':
-        df = pd.DataFrame(data, index=frame.index, columns=frame.columns)
-        df = df.cumsum()
-        fig = df.plot()
-        plt.title("Column behavior")
-        plt.xlabel("Values") 
-        plt.ylabel("Frequency")
-        plt.show(fig)
-        print ' '
-        continue
-    data = pd.read_csv(fhand, header=0)
-    frame = pd.DataFrame(data)
-
-    print ' '
-    print 'Index:'
-    print frame.index
-    print ' '
-    print 'Columns:'
-    print frame.columns[0]
-    print frame.columns[1]
-    print ' '
+    column1 = str(hand)
+    column2 = str(hand2)
     
-    ############################################################################
-
-    coln1= str(frame.columns[0])
-    coln2= str(frame.columns[1])
-    col1 = frame[coln1].values
-    col2 = frame[coln2].values
-    frame['Difference'] = col1 - col2
+    frame['Difference'] = data[column1] - data[column2]
     Difs = frame['Difference'].values
     SumDifs = sum(Difs)
     nDifs = len(Difs)
@@ -106,7 +77,7 @@ while True:
     print '--------------------------------------------------------'
     alpha = float(fh)
     def t(alpha, gl):
-        return scipy.stats.t.ppf(1-(alpha/2), gl)
+        return scipy.stats.t.ppf(1-(alpha/2), gl) # alpha/2 because two tailed
     gl = nDifs-1
     tvalue = (t(alpha,gl))
     print ' '
@@ -133,9 +104,62 @@ while True:
         print 'Ho = Reject'
     elif (tstat < CIa) | (tstat > CIb):
         print 'Ho = Fail to reject'
+
     print ' '
-    print ' '
-# print frame                      # uncomment line to see it automatically.
-print(' ')
+    
+    while True:
+
+        print 'KEYWORDS:\n\nEnter "plot" to see the columns behavior.\nEnter "graph" to see the Differences of Means distribution.\nEnter "next" to analyze another two columns in the same file.\nEnter "ya" to quit the program.\n\n'
+        user = raw_input('Enter keyword: ')
+        hands = str(user)
+        print ' '
+        if hands == 'graph':
+            Array = sorted(Difs)
+            pdf2 = stats.norm.pdf(Array, 0, tvalue)
+            altn = int(nDifs)
+            legen = ("n = "+str(altn))
+            fig2 = plt.plot(Array, pdf2, label=legen)
+            plt.title("Differences of Means distribution")
+            plt.xlabel("Values")
+            altm = str(Avrg)
+            legenda = ("Mean =\n "+altm)
+            V1 = 0 - tvalue
+            V2 = 0 + tvalue
+            plt.axvline(x= 0, color='r', linestyle='dashed', label=legenda)
+            plt.axvline(x= V1, color ='g', linestyle='dashed', label=V1)
+            plt.axvline(x= V2, color = 'g', linestyle='dashed', label=V2)
+            score = ("t =\n"+str(tstat))
+            plt.axvline(x=tstat, color = 'purple', label=score)
+            print ' '
+            print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
+            plt.legend()
+            plt.show(fig2)
+            print ' '
+            continue
+
+        elif hands == 'plot':
+            Array = sorted(Difs)
+            x = np.cumsum(data[column1])
+            y = np.cumsum(data[column2])
+            z = np.cumsum(Array)
+            plt.plot(x, 'b', label=column1)
+            plt.plot(y, 'g', label=column2)
+            plt.plot(z, 'r', label="Differences")
+            plt.title("Column behavior")
+            plt.xlabel("Values") 
+            plt.ylabel("Frequency")
+            print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
+            plt.legend()
+            plt.show()
+            print ' '
+            continue
+            
+        elif hands == 'next':
+            break
+        elif (hands == 'ya') | (hands == ''):
+            print 'Hasta la vista, baby.'
+            exit()
+
+print' '
 print 'Hasta la vista, baby.'
-print(' ')
+print' '
