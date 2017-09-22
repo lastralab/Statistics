@@ -1,6 +1,6 @@
 # Gender and the environment in Mexico
 
-In order to analyze my data, the following programs were written:
+Programs I wrote to analyze my data:
 
 - **MoCT.py**
   - Measures of Central Tendency
