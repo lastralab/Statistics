@@ -5,7 +5,7 @@ Programs I wrote to analyze my data:
 - **MoCT.py**
   - Measures of Central Tendency
   - Normal distribution graph
-  - Sampling distribution
+  - Sampling distribution graph
   - z-table
  <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722726-302dbe7a-9f09-11e7-8188-014fc61d3ef0.png" width=50%/><br>
@@ -13,6 +13,7 @@ Programs I wrote to analyze my data:
   
 - **DepT-test**
   - Two tailed T-test
+  - Column behavior graph
   - Differences of means graph
   - T statistic
   - Critical regions
@@ -21,31 +22,35 @@ Programs I wrote to analyze my data:
   <br>
   
 - **ConverS.py**
-  - Values replacement in data
+  - Value replacement in data
 
 - **RangeR.py**
-  - Values assignment to intervals
+  - Value assignment to interval
   
 - **SkewU.py**
   - Skewness calculation
+  - Skewness graph
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30722630-b2205c22-9f08-11e7-88b1-0afc91895027.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722629-b1ecea86-9f08-11e7-87af-f995280449e4.png" width=50%/><br>
   <br>
 - **Boxy.py**
   - BoxCox transformation to reduce skewness
+  - Comparison graphs
      <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30747462-c15cc358-9f83-11e7-9abc-2665662b8fb2.png" width=100%/><br>
   <br>
  
 - **Stan.py**
   - Standardization of data
+  - Comparison graphs
  <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30747475-c8ece6ac-9f83-11e7-8ec1-f1abbfd6e67c.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747478-c9e3e7a4-9f83-11e7-893f-a8706f519880.png" width=50%/><br>
   <br>
   
 - **PeaR.py**
   - Pearson correlation coefficient
-  - Correlation graph
+  - p-value
+  - Negative/Positive correlation graph
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30722725-302dad2c-9f09-11e7-8749-9ae60f964a88.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722727-303258f4-9f09-11e7-8b9a-3041fa9e7a24.png" width=50%/><br>
 
