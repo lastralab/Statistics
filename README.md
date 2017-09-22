@@ -70,7 +70,7 @@ More data visualization coming soon...
 - <a href="https://docs.python.org/3/using/mac.html">Macintosh</a>.<br>
 - <a href="https://docs.python.org/3/using/unix.html">Unix</a>.<br>
 - <a href="https://docs.python.org/3/using/windows.html">Windows</a>:<br>
-~ <a href="https://www.youtube.com/watch?v=BArhFr06nPM">Tutorial for installation</a>.<br>
+~ <a href="https://www.youtube.com/watch?v=BArhFr06nPM">Tutorial for Windows installation</a>.<br>
 ~ <a href="https://www.youtube.com/watch?v=ZO1SKpL8Jxk">Easy Way to run Python Programs on Windows</a>.<br>
 
 <br>
