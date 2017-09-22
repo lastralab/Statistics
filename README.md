@@ -62,11 +62,19 @@ Programs I wrote to analyze my data:
 <img src="https://user-images.githubusercontent.com/22894897/30762494-94002e6a-9fb8-11e7-833c-cde847c021d3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30762497-964f8ba2-9fb8-11e7-9b08-122380dc0beb.png" width=50%/><br>
 <br><br>
 <br><br>
-
-
 More data visualization coming soon...
 <br>
 <br>
+**How to install/use Python**
+
+<a href="https://www.python.org/downloads/">Downloads here!</a>:
+
+- Macintosh <a href="https://docs.python.org/3/using/mac.html">Documentation</a>.
+- Windows <a href="https://docs.python.org/3/using/windows.html">Documentation</a>.
+  - <a href="https://www.youtube.com/watch?v=BArhFr06nPM">Tutorial for installation</a>.
+  - <a href="https://www.youtube.com/watch?v=ZO1SKpL8Jxk">Easy Way to run Python Programs on Windows</a>.
+- Unix <a href="https://docs.python.org/3/using/unix.html">Documentation</a>.
+
 <br>
 <br>
 <p align="center"><a href="https://lastralab.github.io/website/index.html" target="_blank"><br><button><img src="http://i.imgur.com/ERyS5Xn.png" alt="l'astra lab icon" width="50px" background="transparent" opacity="0.5" padding="0;"/></button></a></p><br><br>
