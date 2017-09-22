@@ -14,7 +14,7 @@ In order to analyze my data, the following programs were written:
 - **DepT-test**
   - Two tailed T-test
   - Differences of means graph
-  - T statistics
+  - T statistic
   - critical t-value
   
 - **ConverS.py**
@@ -36,7 +36,7 @@ In order to analyze my data, the following programs were written:
   
 - **PeaR.py**
   - Pearson correlation coefficient
-  - Correlation graphs (working on it)
+  - Correlation graph
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30722725-302dad2c-9f09-11e7-8749-9ae60f964a88.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722727-303258f4-9f09-11e7-8b9a-3041fa9e7a24.png" width=50%/><br>
 
