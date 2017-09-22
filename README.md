@@ -62,4 +62,4 @@ More functions coming soon...
 <br>
 <br>
 <br>
-<p align="center"><a href="https://lastralab.github.io/website/timeline/index.html" target="_blank"><br><button><img src="http://i.imgur.com/ERyS5Xn.png" alt="l'astra lab icon" width="50px" background="transparent" opacity="0.5" padding="0;"/></button></a></p><br><br>
+<p align="center"><a href="https://lastralab.github.io/website/index.html" target="_blank"><br><button><img src="http://i.imgur.com/ERyS5Xn.png" alt="l'astra lab icon" width="50px" background="transparent" opacity="0.5" padding="0;"/></button></a></p><br><br>
