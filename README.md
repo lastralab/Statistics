@@ -22,10 +22,10 @@ Programs I wrote to analyze my data:
   <br>
   
 - **ConverS.py**
-  - Value replacement in data
+  - Values replacement in data
 
 - **RangeR.py**
-  - Value assignment to interval
+  - Values assignment to intervals
   
 - **SkewU.py**
   - Skewness calculation
