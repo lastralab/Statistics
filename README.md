@@ -61,7 +61,7 @@ Programs I wrote to analyze my data:
 <br><br>
 
 
-More functions coming soon...
+More data visualization coming soon...
 <br>
 <br>
 <br>
