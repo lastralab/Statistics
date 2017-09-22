@@ -15,7 +15,7 @@ In order to analyze my data, the following programs were written:
   - Two tailed T-test
   - Differences of means graph
   - T statistic
-  - critical t-value
+  - Critical regions
    <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30747470-c444ecbc-9f83-11e7-8d5f-272e473878e3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747472-c662db76-9f83-11e7-8892-4f998ad1710a.png" width=50%/><br>
   <br>
@@ -29,7 +29,7 @@ In order to analyze my data, the following programs were written:
 - **SkewU.py**
   - Skewness calculation
 <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/30722629-b1ecea86-9f08-11e7-87af-f995280449e4.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722630-b2205c22-9f08-11e7-88b1-0afc91895027.png" width=50%/><br>
+<img src="https://user-images.githubusercontent.com/22894897/30722630-b2205c22-9f08-11e7-88b1-0afc91895027.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722629-b1ecea86-9f08-11e7-87af-f995280449e4.png" width=50%/><br>
   <br>
 - **Boxy.py**
   - BoxCox transformation to reduce skewness
