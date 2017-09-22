@@ -58,6 +58,9 @@ Programs I wrote to analyze my data:
   - Spearman correlation coefficient
   - p-value
   - Negative/Positive correlation graph
+  <br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30762494-94002e6a-9fb8-11e7-833c-cde847c021d3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30762497-964f8ba2-9fb8-11e7-9b08-122380dc0beb.png" width=50%/><br>
+<br><br>
 <br><br>
 
 
