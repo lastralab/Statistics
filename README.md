@@ -52,7 +52,7 @@ Programs I wrote to analyze my data:
   - p-value
   - Negative/Positive correlation graph
 <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/30722725-302dad2c-9f09-11e7-8749-9ae60f964a88.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722727-303258f4-9f09-11e7-8b9a-3041fa9e7a24.png" width=50%/><br>
+<img src="https://user-images.githubusercontent.com/22894897/30765204-d0e38848-9fc4-11e7-9dd0-20916fc8a484.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722727-303258f4-9f09-11e7-8b9a-3041fa9e7a24.png" width=50%/><br>
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/SpeaR.py"><b>SpeaR.py</b></a><br>
   - Spearman correlation coefficient
