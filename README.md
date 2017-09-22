@@ -65,15 +65,15 @@ Programs I wrote to analyze my data:
 More data visualization coming soon...
 <br>
 <br>
-<b>How to install/use Python</b>
-
+<b>How to install/use Python:</b>
+<br><br>
 <a href="https://www.python.org/downloads/">Downloads here!</a>:
-
-- Macintosh <a href="https://docs.python.org/3/using/mac.html">Documentation</a>.
-- Windows <a href="https://docs.python.org/3/using/windows.html">Documentation</a>.
+<br>
+- <a href="https://docs.python.org/3/using/mac.html">Macintosh</a>.
+- <a href="https://docs.python.org/3/using/windows.html">Windows</a>.
   - <a href="https://www.youtube.com/watch?v=BArhFr06nPM">Tutorial for installation</a>.
   - <a href="https://www.youtube.com/watch?v=ZO1SKpL8Jxk">Easy Way to run Python Programs on Windows</a>.
-- Unix <a href="https://docs.python.org/3/using/unix.html">Documentation</a>.
+- <a href="https://docs.python.org/3/using/unix.html">Unix</a>.
 
 <br>
 <br>
