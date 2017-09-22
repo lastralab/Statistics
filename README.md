@@ -65,7 +65,7 @@ Programs I wrote to analyze my data:
 More data visualization coming soon...
 <br>
 <br>
-**How to install/use Python**
+<b>How to install/use Python</b>
 
 <a href="https://www.python.org/downloads/">Downloads here!</a>:
 
