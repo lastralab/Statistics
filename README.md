@@ -1,169 +1,60 @@
-More **Inferential Statistics programs** <a href="https://github.com/lastralab/Statistics/tree/master/Project">here</a>.
+# Gender and the environment in Mexico
 
-# MoCT.py
-**Retrieving, Processing, and Visualizing Data with Python**
+Programs I wrote to analyze my data:
 
-<b><u>Capstone project</u></b>: To write a program that can read, analyze and visualize data, using the skills from the <a href="https://www.coursera.org/learn/python-data-visualization/home/welcome">course</a>, and apply statistics knowledge to get results from a real investigation. 
+- **MoCT.py**
+  - Measures of Central Tendency
+  - Normal distribution graph
+  - Sampling distribution
+  - z-table
+ <br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722726-302dbe7a-9f09-11e7-8188-014fc61d3ef0.png" width=50%/><br>
+  <br>
+  
+- **DepT-test**
+  - Two tailed T-test
+  - Differences of means graph
+  - T statistic
+  - Critical regions
+   <br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30747470-c444ecbc-9f83-11e7-8d5f-272e473878e3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747472-c662db76-9f83-11e7-8892-4f998ad1710a.png" width=50%/><br>
+  <br>
+  
+- **ConverS.py**
+  - Values replacement in data
 
-To use this for your own data, you'll need to install these packages:
-
-:package: <a href="https://docs.python.org/2/library/math.html" window="_blank">math</a>  
-:package: <a href="https://pypi.python.org/pypi/numpy" target="_blank">numpy</a>  
-:package: <a href="https://pypi.python.org/pypi/pandas/0.20.3" target="_blank">pandas</a>  
-:package: <a href="https://pypi.python.org/pypi/scipy/0.19.1" target="_blank">scipy</a>  
-:package: <a href="https://pypi.python.org/pypi/matplotlib/2.0.2" target="_blank">matplotlib</a> <br>
-:package: <a href="http://scikit-learn.org/stable/" target="_blank">Scikit</a> 
-
-
-- When you run the program, you'll see a set of easy instructions to follow:
-
-    - Make sure that the .csv file is in the same folder of this script, otherwise it won't be found.
-    - To start, enter the name of the file without "quotes" and ending with .txt (example: scores.csv).
-    - The name of the file will be the legend on the first plot, I recommend you to choose the name wisely.  
-    - Later, when you are done selecting columns to analyze or values for sample distribution, enter "ya" and the program will finish nicely.  
-
-After entering the name of the file you want to analyze, you'll get:
-
-- **N**  
-- **Mean**  
-- **Sum of squares**  
-- **Variance**  
-- **Population Standard Deviation**  
-- **Standard Error**  
-- :chart_with_downwards_trend: **Graph for population distribution**  
-
-Then you can choose sample means and values to see how far they are from the mean... and get:
-
-- **Standard Error for each sample**  
-- **Z-score**  
-- **Z-table value for that score**  
-- **Probability of getting that value** 
-- **Confidence interval**
-- **Margin of error**
-- :chart_with_upwards_trend: **Graph for sample distribution**  
-
-* * *
+- **RangeR.py**
+  - Values assignment to intervals
+  
+- **SkewU.py**
+  - Skewness calculation
+<br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30722630-b2205c22-9f08-11e7-88b1-0afc91895027.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722629-b1ecea86-9f08-11e7-87af-f995280449e4.png" width=50%/><br>
+  <br>
+- **Boxy.py**
+  - BoxCox transformation to reduce skewness
+     <br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30747462-c15cc358-9f83-11e7-9abc-2665662b8fb2.png" width=100%/><br>
+  <br>
+ 
+- **Stan.py**
+  - Standardization of data
+ <br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30747475-c8ece6ac-9f83-11e7-8ec1-f1abbfd6e67c.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747478-c9e3e7a4-9f83-11e7-893f-a8706f519880.png" width=50%/><br>
+  <br>
+  
+- **PeaR.py**
+  - Pearson correlation coefficient
+  - Correlation graph
+<br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30722725-302dad2c-9f09-11e7-8749-9ae60f964a88.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722727-303258f4-9f09-11e7-8b9a-3041fa9e7a24.png" width=50%/><br>
 
 <br><br>
-Code <i>preview</i> (See <a href="https://github.com/lastralab/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a>, which will be constantly updated, not the example below):  <br><br>
 
-```Python
-# -*- coding: utf-8 -*-
-#!/usr/bin/python
-# Author: Niam Moltta - UY/2017
-# MIT License
 
-import math
-import numpy as np
-import pandas as pd
-from scipy import stats
-from scipy.stats import norm
-import scipy.stats as stats
-import scipy.stats as st
-import matplotlib
-import matplotlib.pyplot as plt
-
-print(' ')
-print(' Welcome to MoCTpy! ')
-print(' --by Tania Mol-- ')
-print(' ')
-print("INSTRUCTIONS:\n \n- Make sure that the .txt file is in the same folder of this script, otherwise it won't be found.\n- To start, enter the name of the file without 'quotes' and ending with .txt (example: scores.txt).\n- Later, when you are done selecting values for sample distribution, type 'ya', hit Return and the program will finish nicely.\n")
-fhand = raw_input('Now, enter the file name: ')
-
-numbers = open(fhand)
-
-A = list()
-for number in numbers :
-    value = float(number)
-    A.append(value)
-
-sigma = sum(A) #sumation
-n = len(A) #total of elements
-mean = sigma / n
-Dev = list()
-AbsDev = list()
-SqDev = list()
-for number in A :
-    val = number - mean
-    Dev.append(val) #Deviation from the mean
-    
-for element in Dev :
-    val = abs(element)
-    AbsDev.append(val) # Absolute Deviation
-    
-for element in AbsDev :
-    val = (element**2)
-    SqDev.append(val) #Square Deviations
-
-SS = sum(SqDev) #Sum of Squares
-Var = SS / n #Variance
-StdDev = math.sqrt(Var) #Standard Deviation
-StdE = StdDev / math.sqrt(n) #Standard Error
-
-print ('---------------------------------------------')
-print ('MEASURES OF CENTRAL TENDENCY for:'), fhand
-print (' ')
-print ('N ='), n
-print ('Mean ='), mean
-print ('Sum of Squares ='), SS
-print ('Variance ='), Var
-print ('Population Standard Deviation ='), StdDev
-print ('Standard Error ='), StdE
-print ('---------------------------------------------')
-print(' ')
-Array = np.asarray(A)
-Array.sort()
-pdf = stats.norm.pdf(Array, mean, StdDev)
-fig = plt.plot(Array, pdf)
-plt.title("Population distribution")
-plt.xlabel("Value")
-plt.ylabel("Frequency")
-print ('To continue, you must save the figure and close it.\n')
-plt.show(fig)
-
-while True:
-    fh = raw_input('Enter value for sample distribution: ')
-    if fh[0] == '#':
-        continue
-    if fh == 'ya':
-        break
-    newn = float(fh)
-    newdeviation = StdDev / math.sqrt(newn)
-    print(' ')
-    print 'The Standard Error for', newn,'is: ', newdeviation
-    print('------------------------------------------------------')
-    print(' ')
-    anyvalue = raw_input('Enter a value to see how far it is from the mean: ')
-    if anyvalue[0] == '#':
-        continue
-    if anyvalue == 'ya':
-        break
-    newmean = float(anyvalue)
-    rest = newmean - mean
-    zscore = rest / newdeviation
-    print ' '
-    print '| The z-score for', anyvalue, 'is:', zscore, '|'
-    pvalue = st.norm.cdf(zscore)
-    print('---------------------------------------------')
-    print '| Z table value =', pvalue, '|'
-    print('---------------------------------------------')
-    greater = 1 - pvalue
-    print 'The probability of getting at least', anyvalue,'is:'
-    print 'p =', greater
-    print 'p = ', greater*100, '%'
-    print('---------------------------------------------')
-    pdf2 = stats.norm.pdf(Array, mean, newdeviation)
-    fig2 = plt.plot(Array, pdf2)
-    plt.title("Sampling distribution")
-    plt.xlabel("Value")
-    plt.ylabel("Frequency")
-    print ('To continue, you must save the figure and close it, or just close it.\n')
-    plt.show(fig2)
-    continue
-print(' ')
-print 'Ciao, baby!'
-print(' ')
-```
+More functions coming soon...
+<br>
+<br>
 <br>
 <br>
 <p align="center"><a href="https://lastralab.github.io/website/timeline/index.html" target="_blank"><br><button><img src="http://i.imgur.com/ERyS5Xn.png" alt="l'astra lab icon" width="50px" background="transparent" opacity="0.5" padding="0;"/></button></a></p><br><br>
