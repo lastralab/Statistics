@@ -44,15 +44,27 @@ if (fh == 'ya') | (fh == ''):
 data = pd.read_csv(fhand, header=0)
 frame = pd.DataFrame(data)
 
+colist = frame.columns
+columns = np.asarray(colist)
+
 while True:
-    
+
+    print ' '
+    print 'Variables in file:\n'
+    print columns
+   
     print ' '
     print '--------------------------------------------------------'
     hand = raw_input('Enter first column header: ')
+    if (hand == 'ya') | (hand == ''):
+        print ' '
+        print 'Ciao ciao, bambino!'
+        print ' '
+        exit()
     hand2 = raw_input('Enter second column header: ')
     print '--------------------------------------------------------'
     print ' '
-
+    
     column1 = str(hand)
     column2 = str(hand2)
     

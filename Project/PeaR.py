@@ -18,7 +18,8 @@ print '                - by Niam Moltta -'
 print ' '
 print ' '
 
-fhand = raw_input('Enter file name:\n\n')
+fhand = raw_input('Enter file name: ')
+print ' '
 
 if fhand == '':
     exit()
@@ -43,72 +44,73 @@ while True:
     hand = raw_input('Enter column header for variable x: ')
     column1 = str(hand)
     print ' '
-    hand2 = raw_input('Enter column header for variable y: ')
-    column2 = str(hand2)
-    print ' '
-
     if (column1 == 'ya') | (column1 == ''):
         break
-    elif (column2 == 'ya') | (column2 == ''):
-        break    
     else:
-        print ' --------------------------------------------------------- '
-        print "Calculating correlation for:\n", column1,"and", column2
-        print ' --------------------------------------------------------- '
 
-        C1 = data[column1]
-        C2 = data[column2]
-    
-        x = np.asarray(C1)
-        y = np.asarray(C2)
-        # Calculate a Pearson correlation coefficient and the p-value for testing non-correlation
-        
-        Pear = pearsonr(x, y)
-        
-        if (Pear[0] == 1)|(Pear[0] == -1):
-            print "Pearson's Coefficient =", Pear[0]
-            print ' '
+        hand2 = raw_input('Enter column header for variable y: ')
+        column2 = str(hand2)
+        print ' '
+        if (column2 == 'ya') | (column2 == ''):
+            break  
         else:
-            print "Pearson's Coefficient =", Pear[0]
-            print ' '
-            print 'p-value =', Pear[1]
-            print ' '
+            print ' --------------------------------------------------------- '
+            print "Calculating correlation for:\n", column1,"and", column2
+            print ' --------------------------------------------------------- '
             
-        Coef = Pear[0]
-        pval = Pear[1]
-
-        r2 = str(Coef)
-        p = str(pval)
-        pvalue = 'p-value = '+ p
-        R2 = "Pearson's = "+ r2
-
-        xcums = np.cumsum(x)
-        ycums = np.cumsum(y)
-
-        yc = sorted(ycums, reverse=True)
-
-        if Coef < 0 :
+            C1 = data[column1]
+            C2 = data[column2]
             
-            plt.plot(xcums, 'b', label=column1)
-            plt.plot(yc, 'r', label=column2)
-            plt.title(R2)
-            plt.xlabel(pvalue)
-            plt.ylabel("Correlation")
-            print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
-            plt.legend()
-            plt.show()
-            print ' '
-        else:
-            plt.plot(xcums, 'b', label=column1)
-            plt.plot(ycums, 'r', label=column2)
-            plt.title(R2)
-            plt.xlabel(pvalue)
-            plt.ylabel("Correlation")
-            print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
-            plt.legend()
-            plt.show()
-            print ' '
-
+            x = np.asarray(C1)
+            y = np.asarray(C2)
+            # Calculate a Pearson correlation coefficient and the p-value for testing non-correlation
+            
+            Pear = pearsonr(x, y)
+            
+            if (Pear[0] == 1)|(Pear[0] == -1):
+                print "Pearson's Coefficient =", Pear[0]
+                print ' '
+            else:
+                print "Pearson's Coefficient =", Pear[0]
+                print ' '
+                print 'p-value =', Pear[1]
+                print ' '
+                
+                Coef = Pear[0]
+                pval = Pear[1]
+                
+                r2 = str(Coef)
+                p = str(pval)
+                pvalue = 'p-value = '+ p
+                R2 = "Pearson's = "+ r2
+                
+                xcums = np.cumsum(x)
+                ycums = np.cumsum(y)
+                
+                yc = sorted(ycums, reverse=True)
+                
+                if Coef < 0 :
+                    
+                    plt.plot(xcums, 'b', label=column1)
+                    plt.plot(yc, 'r', label=column2)
+                    plt.title(R2)
+                    plt.xlabel(pvalue)
+                    plt.ylabel("Correlation")
+                    print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
+                    plt.legend()
+                    plt.show()
+                    print ' '
+                else:
+                    plt.plot(xcums, 'b', label=column1)
+                    plt.plot(ycums, 'r', label=column2)
+                    plt.title(R2)
+                    plt.xlabel(pvalue)
+                    plt.ylabel("Correlation")
+                    print ('To continue, you must save the figure and close it, or just close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
+                    plt.legend()
+                    plt.show()
+                    print ' '
+                    
 '''The Pearson correlation coefficient measures the linear relationship
  between two datasets. Strictly speaking, Pearson's correlation requires
  that each dataset be normally distributed. Like other correlation

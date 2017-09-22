@@ -112,12 +112,14 @@ while True:
             print 'File created as "Standardized.txt"\n\nIf you want to transform another column, you need to change this file name in your folder in order to create a new one.'
             print ' '
             
-        elif (answer == 'n')|(answer == ''):
+        elif answer == '':
+            break
+        
+        elif answer == 'n':
             print ' '
             print 'Not a single file was created.'
             print ' '
-            break
-        
+            continue
         else:
             break
         
