@@ -7,6 +7,7 @@ Programs I wrote to analyze my data:
   - Normal distribution graph
   - Sampling distribution graph
   - z-table
+  - Confidence Interval
  <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722726-302dbe7a-9f09-11e7-8188-014fc61d3ef0.png" width=50%/><br>
   <br>
@@ -16,7 +17,7 @@ Programs I wrote to analyze my data:
   - Column behavior graph
   - Differences of means graph
   - T statistic
-  - Critical regions
+  - Confidence Interval
    <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30747470-c444ecbc-9f83-11e7-8d5f-272e473878e3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747472-c662db76-9f83-11e7-8892-4f998ad1710a.png" width=50%/><br>
   <br>
@@ -25,7 +26,12 @@ Programs I wrote to analyze my data:
   - Values replacement in data
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/RangeR.py"><b>RangeR.py</b></a><br>
-  - Values assignment to intervals
+  - Intervals
+  - Minimum / Maximum
+  - Length factors
+<br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30775730-ddb76822-a06f-11e7-907a-4b892353f880.png" width=50%/><br><br>  
+ 
   
 - <a href="https://github.com/lastralab/Statistics/blob/master/SkewU.py"><b>SkewU.py</b></a><br>
   - Skewness calculation
