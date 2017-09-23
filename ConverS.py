@@ -11,12 +11,12 @@ import numpy as np
 import pandas as pd
 
 print ' '
-print '     *----------------------------*'
-print '     |                            |'
-print '     |   Welcome to ConverS.py    |'
-print '     |    --by Niam Moltta--      |'
-print '     |                            |'
-print '     *----------------------------*'
+print ' '
+print ' '
+print '          Welcome to ConverS.py'
+print '           --by Niam Moltta--'
+print ' '
+print ' '
 print ' '
 
 fhand = raw_input('Enter file name: ')
