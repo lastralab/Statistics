@@ -28,7 +28,7 @@ Programs I wrote to analyze my data:
 - <a href="https://github.com/lastralab/Statistics/blob/master/RangeR.py"><b>RangeR.py</b></a><br>
   - Values assignment to Intervals
 <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/30775730-ddb76822-a06f-11e7-907a-4b892353f880.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30775757-7f0a2d18-a070-11e7-93d8-eae1feef4574.png" width=50%/><br><br>  
+<img src="https://user-images.githubusercontent.com/22894897/30775730-ddb76822-a06f-11e7-907a-4b892353f880.png" height=150px/><img src="https://user-images.githubusercontent.com/22894897/30775757-7f0a2d18-a070-11e7-93d8-eae1feef4574.png" height=150px/><br><br>  
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/SkewU.py"><b>SkewU.py</b></a><br>
   - Skewness calculation
