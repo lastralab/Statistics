@@ -6,22 +6,21 @@ I downloaded some files from http://www.inegi.org.mx/ and I wrote some Python pr
 
 The main **INSTRUCTIONS** for all of them are very simple:
 
-- Make sure that the .csv file is in the same folder of the script, otherwise it won't be found.
-- To start, enter the name of the file without 'quotes' (example: scores.csv).
-- Some of programs can draw graphs, create files with new data, or they may need more information in order to proceed, if that's the case, you can enter 'next' to proceed.
-- Enter the name of the column (header) in that file that you want to analyze.
-- Enter 'ya' and the program will finish nicely. 
+- Make sure that the .csv file is in the same folder of the script, otherwise it won't be found.  
+- To start, enter the name of the file without 'quotes' (example: scores.csv).  
+- Some of programs can draw graphs, create files with new data, or they may need more information in order to proceed, if that's the case, you can enter 'next' to proceed.  
+- Enter the name of the column (header) in that file that you want to analyze.  
+- Enter 'ya' and the program will finish nicely.  
 
-**_All the programs have the same structure so you can use the same keywords to start/proceed/quit._**
+**_All the programs have the same structure so you can use the same keywords to start/proceed/quit._**  
 
 <br>
 - <a href="https://github.com/lastralab/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a><br>
-  - Measures of Central Tendency<br>
-  - Normal distribution graph<br>
-  - Sampling distribution graph<br>
-  - z-table<br>
-  - Confidence Interval<br>
- <br><br>
+  - Measures of Central Tendency  
+  - Normal distribution graph  
+  - Sampling distribution graph  
+  - z-table  
+  - Confidence Interval  
 <img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=45%/><img src="https://user-images.githubusercontent.com/22894897/30722726-302dbe7a-9f09-11e7-8188-014fc61d3ef0.png" width=45%/><br>
   <br>
   
