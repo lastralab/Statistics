@@ -14,6 +14,15 @@ The main **INSTRUCTIONS** for all of them are very simple:
 
 **_All the programs have the same structure so you can use the same keywords to start/proceed/quit._**  
 
+- <a href="https://github.com/lastralab/Statistics/blob/master/DepT-test.py"><b>DepT-test</b></a><br>
+  - Two tailed T-test
+  - Column behavior graph
+  - Differences of means graph
+  - T statistic
+  - Confidence Interval
+   <br><br>
+<img src="https://user-images.githubusercontent.com/22894897/30747470-c444ecbc-9f83-11e7-8d5f-272e473878e3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747472-c662db76-9f83-11e7-8892-4f998ad1710a.png" width=50%/><br>
+  <br>
 <br>
 - <a href="https://github.com/lastralab/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a><br>
   - Measures of Central Tendency  
