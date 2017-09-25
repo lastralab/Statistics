@@ -8,15 +8,10 @@
 import math
 import numpy as np
 import pandas as pd
-from scipy import stats
 from scipy.stats import norm
-import scipy.stats as stats
 import scipy.stats as st
-import matplotlib
 import matplotlib.pyplot as plt
 import re
-import scipy.stats
-import matplotlib.pyplot as mlab
 
 print ' '
 print ' '
@@ -28,7 +23,7 @@ print '     |                            |'
 print '     *----------------------------*'
 print ' '
 print ' '
-print 'INSTRUCTIONS:\n\nYou must run this program in the same folder of your data.'
+print 'INSTRUCTIONS:\n\nYou must run this program in the same folder of your data files.'
 
 print ' '
 
@@ -50,15 +45,16 @@ columns = np.asarray(colist)
 while True:
 
     print ' '
-    print 'Variables in file:\n'
+    print 'Columns in', re.findall('(.+?).csv', fhand), 'are:\n'
     print columns
    
     print ' '
     print '--------------------------------------------------------'
     hand = raw_input('Enter first column header: ')
+    print ' '
     if (hand == 'ya') | (hand == ''):
         print ' '
-        print 'Ciao ciao, bambino!'
+        print 'Ciao, bambino!'
         print ' '
         exit()
     hand2 = raw_input('Enter second column header: ')
@@ -68,7 +64,7 @@ while True:
     column1 = str(hand)
     column2 = str(hand2)
     
-    frame['Difference'] = data[column1] - data[column2]
+    frame['Difference'] = data[column1] - data[column2] #
     Difs = frame['Difference'].values
     SumDifs = sum(Difs)
     nDifs = len(Difs)
@@ -89,7 +85,7 @@ while True:
     print '--------------------------------------------------------'
     alpha = float(fh)
     def t(alpha, gl):
-        return scipy.stats.t.ppf(1-(alpha/2), gl) # alpha/2 because two tailed
+        return st.t.ppf(1-(alpha/2), gl) # alpha/2 because two tailed
     gl = nDifs-1
     tvalue = (t(alpha,gl))
     print ' '
@@ -99,7 +95,7 @@ while True:
     else:
         t = t*(1)
     print 't-value =', tvalue*t
-    pvalue = stats.t.sf(np.abs(tstat), nDifs-1)*2
+    pvalue = st.t.sf(np.abs(tstat), nDifs-1)*2
     print ' '
     print 'p-value =', pvalue
     print ' '
@@ -169,9 +165,11 @@ while True:
         elif hands == 'next':
             break
         elif (hands == 'ya') | (hands == ''):
+            print ' '
             print 'Hasta la vista, baby.'
+            print ' '
             exit()
 
-print' '
+print ' '
 print 'Hasta la vista, baby.'
-print' '
+print ' '

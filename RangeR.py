@@ -36,7 +36,7 @@ columns = np.asarray(colist)
 
 while True:
 
-    print 'Your column headers are:'
+    print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
     print ' '
     print columns
     print ' '

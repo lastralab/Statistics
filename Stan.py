@@ -38,7 +38,7 @@ columns = np.asarray(coolist)
 while True:
 
     print ' '
-    print 'Your variables are:\n'
+    print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
     print columns
     print ' '
 

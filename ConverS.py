@@ -20,7 +20,7 @@ print ' '
 print ' '
 
 fhand = raw_input('Enter file name: ')
-
+filecsv = str(fhand)
 if fhand == '':
     exit()
 
@@ -34,7 +34,7 @@ coolist = frame.columns
 columns = np.asarray(coolist)
 
 print ' '
-print 'Your variables are:\n'
+print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
 print columns
 print ' '
 
@@ -43,6 +43,7 @@ hand = raw_input('Enter column header:\n\n')
 column = str(hand)
 
 if (column == 'ya') | (column == ''):
+    print '\nHasta la vista, human.\n\n'
     exit()
 
 # Replace missing values with zeros in the selected [column]

@@ -39,7 +39,7 @@ columns = np.asarray(colist)
 while True:
 
     print ' '
-    print 'Variables in file:\n'
+    print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
     print columns
     print ' '
     hand = raw_input('Enter column header for variable x: ')

@@ -10,7 +10,6 @@ import matplotlib.pylab as plt
 import re
 from sklearn import preprocessing
 import pandas as pd
-import seaborn as sb
 
 print ' '
 print ' '
@@ -39,7 +38,7 @@ columns = np.asarray(colist)
 while True:
 
     print ' '
-    print 'Variables in file:\n'
+    print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
     print columns
     print ' '
     hand = raw_input('Enter column header for variable x: ')

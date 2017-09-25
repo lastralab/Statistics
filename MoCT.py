@@ -22,13 +22,16 @@ print('           Welcome to MoCT.py')
 print('           --by Niam Moltta--')
 print(' ')
 print(' ')
-print("INSTRUCTIONS:\n \n- Make sure that the .csv file is in the same folder of this script, otherwise it won't be found.\n- To start, enter the name of the file without 'quotes' and ending with .csv (example: scores.csv).\n- The name of the file will be the legend on the first plot, I recommend you to choose the name wisely.\n- Later, when you are done selecting columns to analyze or values for sample distribution, enter 'ya' and the program will finish nicely. \n")
+print("INSTRUCTIONS:\n \n- Make sure that the .csv file is in the same folder of this script, otherwise it won't be found.\n- To start, enter the name of the file without 'quotes' and ending with .csv (example: scores.csv).\n- Enter 'next' to analyze a sample of that column.\n- Enter 'ya' and the program will finish nicely. \n")
 
 fhand = raw_input('Enter file name: ')
 
 filecsv = str(fhand)
 
 if filecsv == '':
+    print(' ')
+    print 'Ciao, human!'
+    print(' ')
     exit()
     
 data = pd.read_csv(filecsv)
@@ -43,7 +46,7 @@ columns = np.asarray(coolist)
 while True:
 
     print ' '
-    print 'Your variables are:\n'
+    print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
     print columns
     print ' '
     
@@ -51,11 +54,16 @@ while True:
 
     column = str(hand)
 
-    if (column == 'ya') | (column == ''):
+    if column == 'next':
         print ' '
         print 'Ready for sampling distribution!'
         print ' '
         break
+    elif (column == 'ya') | (column == ''):
+        print ' '
+        print 'Hasta la vista, human.'
+        print ' '
+        exit()
     
     else:
         
@@ -99,7 +107,7 @@ while True:
         print ('Sum of Squares ='), SS
         print ('Variance ='), Var
         print ('Standard Deviation ='), StdDev
-        print ('Standard Error ='), StdE # optional
+        print ('Standard Error ='), StdE 
         print ('---------------------------------------------')
         print(' ')
         
@@ -126,14 +134,12 @@ while True:
         print ('To continue, you must save the figure and close it. You can also zoom in it or move the graph to see it better, use the buttons.\n')
         print ' '
 
-######################################################################
-
 while True:
     
     fh = raw_input('Enter n value for sample distribution: ')
     if fh[0] == '#':
         continue
-    if fh == 'ya':
+    if (fh == 'ya') | (fh == ''):
         print  ' '
         break
     newn = float(fh)
@@ -145,7 +151,7 @@ while True:
     anyvalue = raw_input('Enter point estimate: ')
     if anyvalue[0] == '#':
         continue
-    if anyvalue == 'ya':
+    if anyvalue == '':
         print  ' '
         break
     newmean = float(anyvalue)
