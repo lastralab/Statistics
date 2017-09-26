@@ -15,11 +15,14 @@ The main **INSTRUCTIONS** for all of them are very simple:
 **_All the programs have the same structure so you can use the same keywords to start/proceed/quit._**  
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/MoCT.py"><b>MoCT.py</b></a><br>
-  - Measures of Central Tendency
-  - Normal distribution graph
+  - Measures of Central Tendency:
+  - N, mean, standard deviation, standard error, etc.
   - Sampling distribution graph
-  - z-table
+  - z-value and p-value from z-table
+  - z-score
+  - One tailed T-test
   - Confidence Interval
+  - Acceptance/Rejection of the null hypothesis.
    <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30881591-b63e3a86-a2dc-11e7-863f-26fe1a2a848e.png" width=50%/><br>
   <br>
@@ -28,29 +31,38 @@ The main **INSTRUCTIONS** for all of them are very simple:
   - Two tailed T-test
   - Column behavior graph
   - Differences of means graph
-  - T statistic
+  - T-statistic
+  - Cohen's D
+  - Acceptance/rejection of the null hypothesis
   - Confidence Interval
    <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30747470-c444ecbc-9f83-11e7-8d5f-272e473878e3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747472-c662db76-9f83-11e7-8892-4f998ad1710a.png" width=50%/><br>
   <br>
   
 - <a href="https://github.com/lastralab/Statistics/blob/master/ConverS.py"><b>ConverS.py</b></a><br>
-  - Values replacement in data
+  - Value replacement
+  - You need to modify this code in order to convert your own data
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/RangeR.py"><b>RangeR.py</b></a><br>
   - Values assignment to Intervals
+  - Returns minimum and maximum
+  - Returns factors for that range
+  - New file with data split by intervals
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30775730-ddb76822-a06f-11e7-907a-4b892353f880.png" height=350px/><img src="https://user-images.githubusercontent.com/22894897/30775757-7f0a2d18-a070-11e7-93d8-eae1feef4574.png" height=350px/><br><br>  
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/SkewU.py"><b>SkewU.py</b></a><br>
   - Skewness calculation
-  - Skewness graph
+  - Returns skewness representation graph
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30722630-b2205c22-9f08-11e7-88b1-0afc91895027.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722629-b1ecea86-9f08-11e7-87af-f995280449e4.png" width=50%/><br>
   <br>
 - <a href="https://github.com/lastralab/Statistics/blob/master/Boxy.py"><b>Boxy.py</b></a><br>
   - BoxCox transformation to reduce skewness
-  - Comparison graphs
+  - Original skewed data histogram
+  - Un-skewed data using sqrt histogram
+  - Un-skewed data using BoxCox histogram
+  - Create file with new data (using BoxCox or sqrt), optional
      <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30747462-c15cc358-9f83-11e7-9abc-2665662b8fb2.png" width=100%/><br>
   <br>
@@ -58,6 +70,7 @@ The main **INSTRUCTIONS** for all of them are very simple:
 - <a href="https://github.com/lastralab/Statistics/blob/master/Stan.py"><b>Stan.py</b></a><br>
   - Standardization of data
   - Comparison graphs
+  - Creates new file with standardized data
  <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30747475-c8ece6ac-9f83-11e7-8ec1-f1abbfd6e67c.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747478-c9e3e7a4-9f83-11e7-893f-a8706f519880.png" width=50%/><br>
   <br>
@@ -65,14 +78,14 @@ The main **INSTRUCTIONS** for all of them are very simple:
 - <a href="https://github.com/lastralab/Statistics/blob/master/PeaR.py"><b>PeaR.py</b></a><br>
   - Pearson correlation coefficient
   - p-value
-  - Negative/Positive correlation graph
+  - Returns graph of correlation relationship
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30765204-d0e38848-9fc4-11e7-9dd0-20916fc8a484.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722727-303258f4-9f09-11e7-8b9a-3041fa9e7a24.png" width=50%/><br>
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/SpeaR.py"><b>SpeaR.py</b></a><br>
   - Spearman correlation coefficient
   - p-value
-  - Negative/Positive correlation graph
+  - Returns graph of correlation relationship
   <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30762494-94002e6a-9fb8-11e7-833c-cde847c021d3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30762497-964f8ba2-9fb8-11e7-9b08-122380dc0beb.png" width=50%/><br>
 <br><br>
