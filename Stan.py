@@ -13,17 +13,22 @@ import numpy as np
 
 print ' '
 print ' '
-print '            Welcome to Standardization.py'
+print '                 Welcome to Stan.py'
 print '                -- by Niam Moltta --'
+print '                      ~~/\//V\ '
 print ' '
 print ' '
-print 'INSTRUCTIONS:\n\nYou need to run this program in the same folder that your data file is.\n\nWhen asked:\nEnter "Y" to create a .txt file with the standardized data.\nEnter "n" to analyze another column, or:\nEnter "ya" to finish the program.\n\n'
+print ' '
+print 'Application: STANDARDIZATION OF DATA.\n\nINSTRUCTIONS:\n\n- You need to run this program in the same folder that contains your data.\n- Select file, select column.\n- Returns standardized data graph.\n- Create file with new data (optional).\n\nWhen prompted:\n\n- Enter "Y" to create a .txt file with the standardized data.\n- Enter "n" to analyze another column, or:\n- Enter "ya" to finish the program.\n\n'
 
 fhand = raw_input('Enter file name: ')
 
 filecsv = str(fhand)
 
 if filecsv == '':
+    print ' '
+    print 'I hate vanellus chilensis'
+    print ' '
     exit()
     
 data = pd.read_csv(filecsv)

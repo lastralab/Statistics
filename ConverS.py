@@ -3,7 +3,7 @@
 # Author: Niam Moltta
 # UY - 2017
 # MIT License
-# Converting str('Clave') to int (value)
+# Converting str('Clave') to int ('value')
 
 import math
 import re
@@ -15,13 +15,21 @@ print ' '
 print ' '
 print '          Welcome to ConverS.py'
 print '           --by Niam Moltta--'
+print '                ~~/\//V\ '
 print ' '
 print ' '
 print ' '
+print 'Application: STRINGS TO NUMBERS TRANSFORMATION.\n\nINSTRUCTIONS:\n\n-You need to modify the code itself in order to convert your own data.\n\n'
 
-fhand = raw_input('Enter file name: ')
+# I wrote this to transform strings to numbers so I could analyze them.
+# I used it to set up my ProA score ("Pro Environment" from words in spanish).
+
+fhand = raw_input('File name: ')
 filecsv = str(fhand)
 if fhand == '':
+    print ' '
+    print 'Arrivederci!'
+    print ' '
     exit()
 
 data = pd.read_csv(fhand)

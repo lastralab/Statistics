@@ -15,13 +15,19 @@ print ' '
 print ' '
 print '                Welcome to SpeaR.py'
 print '                - by Niam Moltta -'
+print '                     ~~/\//V\ '
 print ' '
 print ' '
+print ' '
+print "Application: SPEARMAN'S CORRELATION COEFFICIENT.\n\nINSTRUCTIONS:\n\n- Select file, select two columns.\n- Returns Spearman's correlation coefficient and p-value.\n- Returns graph of correlation relationship.\n\n"
 
-fhand = raw_input('Enter file name: ')
+fhand = raw_input('Enter .csv file name: ')
 print ' '
 
 if fhand == '':
+    print ' '
+    print 'Arrivederci!'
+    print ' '
     exit()
     
 filecsv = str(fhand)

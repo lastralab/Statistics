@@ -17,15 +17,19 @@ print ' '
 print ' '
 print '                Welcome to Boxy.py'
 print '               -- by Niam Moltta --'
+print '                     ~~/\//V\ '
 print ' '
 print ' '
-print 'INSTRUCTIONS:\n\nYou need to run this program in the same folder that your data file is.\n\nWhen asked:\n\nEnter "Y" to create a .txt file with the fixed data.\nEnter "Ybut" to create a .txt file with the sqrt transformed data.\nEnter "n" to work with another variable, or:\nEnter "ya" to finish the program.\n\n'
+print 'Application: SKEWNESS REDUCTION WITH BOXCOX.\n\nINSTRUCTIONS:\n\n- You need to run this program in the same folder that contains your data.\n * Data must NOT contain negative values.\n- Select file, select column.\n- Returns original skewed data histogram. \n- Returns un-skewed data using sqrt histogram.\n- Returns un-skewed data using BoxCox histogram.\n- Select the un-skewed data that you prefer to print in a new file.\n- Create file with new data.\n\nWhen prompted:\n\n- Enter "Y" to create a .txt file with the BoxCox fixed data.\n- Enter "Ybut" to create a .txt file with the sqrt transformed data.\n- Enter "n" to work with another variable, or:\n- Enter "ya" to finish the program.\n\n * Sometimes using "sqrt" (square root) is enough to reduce skewness.\n'
 
 fhand = raw_input('Enter file name: ')
 
 filecsv = str(fhand)
 
 if filecsv == '':
+    print ' '
+    print 'Arrivederci!'
+    print ' '
     exit()
     
 data = pd.read_csv(filecsv)

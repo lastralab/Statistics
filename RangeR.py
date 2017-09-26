@@ -14,8 +14,11 @@ print ' '
 print ' '
 print '                Welcome to RangeR.py'
 print '                -- by Niam Moltta --'
+print '                      ~~/\//V\ '
 print ' '
 print ' '
+print ' '
+print 'Application: ASSIGNING DATA TO INTERVALS.\n\nINSTRUCTIONS:\n\n- Select file, select column.\n- Returns minimum and maximum.\n- Returns factors for that range.\n- Select number of intervals.\n- Create file with data split by intervals.\n\n'
 
 fhand = raw_input('Enter file name: ')
 

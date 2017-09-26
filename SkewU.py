@@ -13,14 +13,20 @@ import numpy as np
 
 print ' '
 print ' '
-print '                Welcome to SkewU.py'
-print '                -- by Niam Moltta --'
+print '                 Welcome to SkewU.py'
+print '                 --by Niam Moltta--'
+print '                      ~~/\//V\ '
 print ' '
 print ' '
+print ' '
+print 'Application: SKEWNESS CALCULATION.\n\nINSTRUCTIONS:\n\n- Select file, select column.\n- Returns skewness value.\n- Returns skewness representation graph.\n\n'
 
 fhand = raw_input('Enter .csv file name: ')
 
 if fhand == '':
+    print ' '
+    print 'Arrivederci!'
+    print ' '
     exit()
 
 print ' '

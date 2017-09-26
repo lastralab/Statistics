@@ -10,19 +10,24 @@ import matplotlib.pylab as plt
 import re
 from sklearn import preprocessing
 import pandas as pd
-import seaborn as sb
 
 print ' '
 print ' '
 print '                Welcome to PeaR.py'
 print '                - by Niam Moltta -'
+print '                    ~~/\//V\ '
 print ' '
 print ' '
+print ' '
+print "Application: PEARSON'S CORRELATION COEFFICIENT.\n\nINSTRUCTIONS:\n\n- Select file, select two numeric columns.\n- Returns Pearson's Coefficient and p-value.\n- Returns graph of correlation relationship.\n\n * Up to +-0.6 may indicate it is a considerable correlation for social sciences, \n   but not for data that you got from very sophisticated instruments.\n\n"
 
 fhand = raw_input('Enter file name: ')
 print ' '
 
 if fhand == '':
+    print ' '
+    print "Avoid becoming a vanellus chilensis!"
+    print ' '
     exit()
     
 filecsv = str(fhand)
