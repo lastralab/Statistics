@@ -88,6 +88,13 @@ The main **INSTRUCTIONS** for all of them are very simple:
   - Returns graph of correlation relationship
   <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30762494-94002e6a-9fb8-11e7-833c-cde847c021d3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30762497-964f8ba2-9fb8-11e7-9b08-122380dc0beb.png" width=50%/><br>
+<br>
+- <a href="https://github.com/lastralab/Statistics/blob/master/ANowoa.py"><b>ANowoa.py</b></a><br>
+  - Analysis of Variance (ANOVA)
+  - Returns One or Two ways.
+  - (currently working on this)
+  <br><br>
+<img src="" width=50%/><img src="" width=50%/><br>
 <br><br>
 <br><br>
 More data visualization coming soon...
