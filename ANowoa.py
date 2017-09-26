@@ -15,4 +15,13 @@ import statsmodels
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 
+print ' '
+print ' '
+print '               Welcome to ANowoa.py'
+print '               -- by Niam Moltta --'
+print '                     ~~/\//V\ '
+print ' '
+print ' '
+print ' '
+
 # working on it
