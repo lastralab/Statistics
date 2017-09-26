@@ -6,11 +6,11 @@ I downloaded some files from http://www.inegi.org.mx/ and I wrote some Python pr
 
 The main **INSTRUCTIONS** for all of them are very simple:
 
-- Make sure that the .csv file is in the same folder of the script, otherwise it won't be found.  
-- To start, enter the name of the file without 'quotes' (example: scores.csv).  
-- Some of programs can draw graphs, create files with new data, or they may need more information in order to proceed, if that's the case, you can enter 'next' to proceed.  
-- Enter the name of the column (header) in that file that you want to analyze.  
-- Enter 'ya' and the program will finish nicely.  
+- Select file.
+- Select column.
+- Select alpha (if applies).
+- Enter 'ya' to quit.
+- etc.
 
 **_All the programs have the same structure so you can use the same keywords to start/proceed/quit._**  
 
