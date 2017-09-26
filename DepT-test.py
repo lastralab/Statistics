@@ -85,6 +85,7 @@ while True:
         print ' '
         Var = sum(StdDevDifs)/(nDifs-1)
         StdDev = math.sqrt(Var)
+        
         print 'Standard Deviation for the differences =', StdDev
         print ' '
         tstat = Avrg/(StdDev/math.sqrt(nDifs))
@@ -209,10 +210,11 @@ while True:
             print ' '
             if hands == 'graph':
                 Array = sorted(Difs)
-                pdf2 = st.norm.pdf(Array, 0, tvalue)
+                Arr = np.asarray(Array)
+                pdf2 = st.norm.pdf(Arr, Avrg, tvalue)
                 altn = int(nDifs)
                 legen = ("n = "+str(altn))
-                fig2 = plt.plot(Array, pdf2, label=legen)
+                fig2 = plt.plot(Arr, pdf2, label=legen)
                 plt.title("Differences of Means distribution")
                 plt.xlabel("Values")
                 altm = str(Avrg)
@@ -266,10 +268,11 @@ while True:
             print ' '
             if hands == 'graph':
                 Array = sorted(Difs)
-                pdf2 = st.norm.pdf(Array, 0, tvalue)
+                Arr = np.asarray(Array)
+                pdf2 = st.norm.pdf(Arr, Avrg, tvalue)
                 altn = int(nDifs)
                 legen = ("n = "+str(altn))
-                fig2 = plt.plot(Array, pdf2, label=legen)
+                fig2 = plt.plot(Arr, pdf2, label=legen)
                 plt.title("Differences of Means distribution")
                 plt.xlabel("Values")
                 altm = str(Avrg)
