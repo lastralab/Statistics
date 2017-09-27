@@ -92,8 +92,10 @@ The main **INSTRUCTIONS** for all of them are very simple:
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/ANowoa.py"><b>Anowoa.py</b></a><br><br>
   - Analysis of Variance (ANOVA) <br> 
-  - Will return one and/or two ways.  <br>
-  - (currently working on it)  <br>
+  - Returns Analysis of Variance between two or more group means. <br>
+  - Returns Degrees of Freedom, Sum of Squares, Mean Square. <br>
+  - Returns F-value and p-value. <br>
+  - Returns Eta squared and Omega squared for effect size.  <br>
   <br><br>
 
 <!--<img src="" width=50%/><img src="" width=50%/><br>-->
