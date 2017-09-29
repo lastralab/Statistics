@@ -2,7 +2,7 @@
 
 Capstone Project for <a href="https://www.coursera.org/specializations/python">Coursera Specialization</a>: "Retrieving, Processing, and Visualizing Data with Python".
 
-I downloaded some files from http://www.inegi.org.mx/ and I wrote some Python programs to read, extract, analyze and visualize data:
+I downloaded data files from http://www.inegi.org.mx/ and I wrote Python programs to read, extract, analyze and visualize that data:
 
 The main **INSTRUCTIONS** for all of them are very simple:
 
