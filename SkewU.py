@@ -10,6 +10,7 @@ import matplotlib.pylab as plt
 from sklearn import preprocessing
 from scipy.stats import skew
 import numpy as np
+import seaborn
 
 print ' '
 print ' '

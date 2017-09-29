@@ -9,6 +9,7 @@ import pandas as pd
 import matplotlib.pylab as plt
 from sklearn import preprocessing
 import re
+import seaborn
 import numpy as np
 from scipy.stats import boxcox
 from scipy.stats import skew

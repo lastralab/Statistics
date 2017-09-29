@@ -10,6 +10,7 @@ import matplotlib.pylab as plt
 from sklearn import preprocessing
 import re
 import numpy as np
+import seaborn
 
 print ' '
 print ' '
