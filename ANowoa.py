@@ -68,12 +68,15 @@ print (' ')
 frame = pd.DataFrame(data)
 
 coolist = frame.columns
+
 columns = np.asarray(coolist)
 
 while True:
 
     ways = raw_input('Enter number of ways to conduct the ANOVA 1/2: ')
+
     print (' ')
+
     hm = str(ways)
 
     if (hm == '') | (hm == '0'):
@@ -85,128 +88,218 @@ while True:
     elif hm == ('1'):
                 
         print ('Columns in', re.findall('(.+?).csv', filecsv), 'are:\n')
+
         print (columns)
+
         print (' ')
             
         hand1 = raw_input('Enter first column header: ')
+
         print (' ')        
+
         if (hand1 == 'ya') | (hand1 == ''):
+
             print (' ')
+
             continue
+
         handg = raw_input('Enter "by group" column header: ')
 
         print (' ')   
             
         column1 = str(hand1)
+
         column2 = str(handg)
             
         # ONE WAY ANOVA:
         
         print (' ')
+
         grps = pd.unique(data[column2].values)
+
         d_data = {grp:data[column1][data[column2] == grp] for grp in grps}
+
         k = len(pd.unique(data[column2]))
+
         N = len(data.values)
+
         n = data.groupby(data[column2]).size()
 
         print ('Number of conditions:')
+
         print ('k =', k)
+
         print (' ')
+
         print ('Conditions times participants:')
+
         print ('N =', N)
+
         print (' ')
+
         print ('Participants in each condition:')
+
         print ('n =', n)
         
         DFbetween = k - 1
+
         DFwithin = N - k
+
         DFtotal = N - 1
+
         print (' ')
+
         print ('Degrees of freedom:')
+
         print ('DFbetween =', DFbetween)
+
         print ('DFwithin =', DFwithin)
+
         print ('DFtotal =', DFtotal)
+
         print (' ')
+
         SSbetween = (sum(data.groupby(data[column2]).sum()[column1]**2)/n)-(data[column1].sum()**2)/N
         print ('Sum of Squares:')
+
         print ('SSbetween =', SSbetween)
+
         print (' ')
+
         Y2 = sum([value**2 for value in data[column1].values])
+
         SSwithin = Y2 - sum(data.groupby(data[column2]).sum()[column1]**2)/n
+
         SStotal = Y2 - (data[column1].sum()**2)/N
+
         print ('SSwithin =', SSwithin)
+
         print (' ')
+
         print ('SStotal =', SStotal)
+
         print (' ')
+
         MSbetween = SSbetween/DFbetween
+
         MSwithin = SSwithin/DFwithin
+
         print ('Mean Square:')
+
         print ('MSbetween =', MSbetween)
+
         print (' ')
+
         print ('MSwithin =', MSwithin)
+
         print (' ')
+
         F = MSbetween / MSwithin
+
         p = stats.f.sf(F, DFbetween, DFwithin)
+
         print 'F =', F
+
         print ' '
+
         print 'p =', p
+
         print ' '
+
         effsize = SSbetween/SStotal  # eta-squared
+
         print 'Effect size:'
+
         print ' '
+
         print 'eta-squared =', effsize
+
         print ' '
+
         om_sqrd = ((SSbetween-(DFbetween*MSwithin))/(SStotal+MSwithin))
+
         print 'Omega squared =', om_sqrd      
+
         print ' '
+
         print 'Drawing scatter plot...'
+
         print ' '
+
         arr = np.asarray(sorted(data[column1]))
+
         arrG = np.asarray(sorted(data[column2]))
+
         name = str(column1)+' / '+str(column2)
+
         warnings.filterwarnings('ignore')
+
         fig1 = plt.scatter(arr, arrG, label=name)
+
         plt.title(name)
+
         plt.ylim((min(arrG)-1, max(arrG)+1))
+
         plt.xlabel(column1)
+
         plt.ylabel(column2)
+
         plt.show(fig1)
 
     elif hm == '2': 
 
         print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
+
         print columns
+
         print ' '
         
         #hand0 = raw_input('Enter "by group" column header: ')
+
         #print ' '
+
         hand1 = raw_input('Enter "by group" column header: ')
+
         print ' '
         
         if hand1 == 'ya':
+
             print ' '
+
             continue
+
         elif hand1 == '':
+
             break
                 
         hand2 = raw_input('Enter variable "X" column header: ')
+
         print ' '
 
         hand3 = raw_input('Enter variable "Y" column header: ')
+
         print ' '
 
         #M = str(hand0)
+
         E = str(hand1)
+
         X = str(hand2)
+
         S = str(hand3)
 
         # TWO WAYS:
 
         print ' '
 
+        print 'Drawing preview of data...'
+        
         name1 = min(data[E])
+
         name2 = max(data[E])
+
         res = name2 - name1
+
         N = int(name2)
 
         groups = data.groupby(data[E])#, data[M]])
@@ -215,7 +308,7 @@ while True:
 
         fig, ax = plt.subplots()
 
-        s = [300*2**n for n in range(len(groups))]
+        s = [100*2**n for n in range(len(groups))]
 
         for key, group in groups:
             group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.25, s=s)
@@ -225,38 +318,64 @@ while True:
         nomenclature = nomen
 
         plt.title(nomenclature)
+        
         plt.xlabel(X);
+
         plt.ylabel(S);
+
         plt.show()
 
-        ''' working on this...
+        ''' working on this:
         print ' '
+        
         XoY = stats.ttest_ind(data[column3], data[column4])
+
         print 'T test for X and Y ready (ind)'
+
         XyY = stats.ttest_rel(data[column3], data[column4])
+
         print 'T test for X and Y ready (rel)'
+
         xyy = stats.ttest_1samp(data[column3], data[column4])
+
         print 'T test for X and Y ready (1samp)'
 
+
         strings = "'"+str(column3)+' ~ '+str(column2)+' + '+str(column4)+"'"
-       
+    
+
         formula = str(strings)
+
         print 'Formula ready'
+
         print formula
+
         model = smf.ols(formula, data=data).fit()
+
         print 'model ready'
+
         print model.summary()
+
         
         aov_table = anova_lm(model, typ=2)
+
         eta_squared(aov_table)
+
         omega_squared(aov_table)
+
         
+
         print aov_table
+
         '''
+
         print ' '
 
             
 print ' '
+
 print 'Hasta la vista, human.'
+
 print ' '
+
 exit()
