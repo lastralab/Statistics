@@ -334,6 +334,7 @@ while True:
         print 'T test for X and Y (1samp)\nReady as "xyy"'
         print ' '
         print '--------------------------------'
+
         Y = data[S]
         Group = data[E]
         X = data[X]
@@ -352,25 +353,7 @@ while True:
         print model.summary()
         print ' '
 
-        nplus = int(N)+1
-
-        n = int(nplus)
-
-        anova = lm(model)
-
         aov_table = lm(model, typ=2)
-
-
-        #infl = lm.get_influence(aov_table)
-
-        #print 'INFLUENCE SUMMARY TABLE:'
-        #print ' '
-        #print infl.summary_table()
-        #print ' '
-
-        #lm.eta_squared(model)
-
-        #lm.omega_squared(model)
 
         print 'ANALYSIS OF VARIANCE (ANOVA) TABLE:'
         print ' '
