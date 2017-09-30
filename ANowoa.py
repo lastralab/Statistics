@@ -283,9 +283,7 @@ while True:
         #M = str(hand0)
 
         E = str(hand1)
-
         X = str(hand2)
-
         S = str(hand3)
 
         # TWO WAYS:
@@ -295,13 +293,9 @@ while True:
         print 'Drawing preview of data...'
         
         name1 = min(data[E])
-
         name2 = max(data[E])
-
         res = name2 - name1
-
         N = int(name2)
-
         groups = data.groupby(data[E])#, data[M]])
 
         colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
@@ -310,35 +304,36 @@ while True:
 
         #s = [100*2**n for n in range(len(groups))]
 
-        #for key, group in groups:
-            #group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.25, s=300)
+        for key, group in groups:
+            group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.25, s=300)
 
         nomen = 'variable "'+str(E)+'" is represented by colors'
-
         nomenclature = nomen
 
-        #plt.title(nomenclature)       
-        #plt.xlabel(X);
-        #plt.ylabel(S);
-        #plt.show()
+        plt.title(nomenclature)       
+        plt.xlabel(X);
+        plt.ylabel(S);
+        plt.show()
 
         print ' '
-        
+        print '--------------------------------'
         XoY = stats.ttest_ind(data[X], data[S])
 
-        print 'T test for X and Y ready (ind):\n', XoY
+        print 'T test for X and Y (ind):\n'
+        print 't-statistic=', XoY[0], '\n\np-value=', XoY[1]
         print ' '
-
+        print '--------------------------------'
         XyY = stats.ttest_rel(data[X], data[S])
 
-        print 'T test for X and Y ready (rel):\n', XyY
+        print 'T test for X and Y (rel):\n'
+        print 't-statistic=', XyY[0], '\n\np-value=', XyY[1]
         print ' '
-
+        print '--------------------------------'
         xyy = stats.ttest_1samp(data[X], data[S])
 
-        print 'T test for X and Y ready (1samp) as xyy'
+        print 'T test for X and Y (1samp)\nReady as "xyy"'
         print ' '
-
+        print '--------------------------------'
         Y = data[S]
         Group = data[E]
         X = data[X]
