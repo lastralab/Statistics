@@ -4,10 +4,10 @@ Capstone Project for <a href="https://www.coursera.org/specializations/python">C
 <br><br>
 I downloaded data files from http://www.inegi.org.mx/, and I designed a variable called ProA (Pro-environment), based on the home's levels of consumption of products that generate pollution and the frequency in which they invested on repairments instead of throwing them away. I wrote Python programs to read, extract, analyze and visualize that data, in a way that anyone can use them for their own purposes, by entering the name of their own files:
 <br>
-<img src="https://user-images.githubusercontent.com/22894897/31048917-fcbba758-a5fe-11e7-986c-48db5fc92e1a.png" width="100%"/><br>
-Gender of person who supports economically the house: '1' for male and '2' for female.<br>
-<img src="https://user-images.githubusercontent.com/22894897/31048907-89598960-a5fe-11e7-881e-c2081dd9edd8.png" width="100%"/><br>
+Gender of person who supports economically the house: Corresponding '1' for Male and '2' for Female.<br>
 Education: From zero to masters/graduate completed.
+<img src="https://user-images.githubusercontent.com/22894897/31048917-fcbba758-a5fe-11e7-986c-48db5fc92e1a.png" width="100%"/><br>
+<img src="https://user-images.githubusercontent.com/22894897/31048907-89598960-a5fe-11e7-881e-c2081dd9edd8.png" width="100%"/>
 <br>
 
 The main **INSTRUCTIONS** for all of them are very simple:
