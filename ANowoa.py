@@ -29,12 +29,17 @@ import matplotlib.cm as cm
 warnings.filterwarnings('ignore')
 
 print (' ')
+
 print (' ')
+
 print ('               Welcome to ANowoa.py')
 print ('               -- by Niam Moltta --')
 print ('                     ~~/\//V\ ')
+
 print (' ')
+
 print (' ')
+
 print (' ')
 
 print ("Application: Analysis of Variance (ANOVA).\n\nINSTRUCTIONS:\n\n- Make sure that the .csv file is in the same folder of this script.\n- To start, enter the name of the file without 'quotes' and ending with .csv\n  Example: scores.csv\n- Enter 'ya' to select number of ways again.\n- Enter 'ya' to quit.\n- Select file, select columns to analyze by group.\n- Returns Analysis of Variance between two or more group means.\n- Returns Degrees of Freedom, Sum of Squares, Mean Square.\n- Returns F-value and p-value.\n- Returns Eta squared and Omega squared for effect size.\n- Returns scatter graph of selected variables.\n")
@@ -44,11 +49,17 @@ fhand = raw_input('Enter .csv file name: ')
 filecsv = str(fhand)
 
 if filecsv == (''):
+
     print(' ')
+    
     print ('Ciao, human!')
+    
     print(' ')
+    
     exit()
-'''    
+
+    '''    
+
 elif re.findall('^http.*$', filecsv):
     
     try:
@@ -61,6 +72,7 @@ elif re.findall('^http.*$', filecsv):
     # possible conflict: S(proa) X(socio) E(educa) M(sexo)       
     except:
 '''        
+
 data = pd.read_csv(filecsv)
 
 print (' ')
