@@ -1,6 +1,9 @@
 # Gender and the environment in Mexico
 
 Capstone Project for <a href="https://www.coursera.org/specializations/python">Coursera Specialization</a>: "Retrieving, Processing, and Visualizing Data with Python".
+<br>
+<img src="https://user-images.githubusercontent.com/22894897/31048607-eac79d70-a5f6-11e7-85f8-dc030284cdca.png" width="90%"/>
+<br>
 
 I downloaded data files from http://www.inegi.org.mx/ and I wrote Python programs to read, extract, analyze and visualize that data, in a way that anyone can use them for their own purposes, by entering the name of their own files:
 
