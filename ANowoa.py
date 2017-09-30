@@ -5,128 +5,146 @@
 # License: MIT
 # One way or another...
 # One and Two ways ANOVA conducting with Python
+#%matplotlib inline
 
-import pandas as pd
-from pandas.tools import plotting
-import matplotlib.pyplot as plt
-import plotly.graph_objs as grow 
-import plotly.figure_factory as FF
-import re
-import numpy as np
-import seaborn
-import statsmodels.formula.api as ols
-from statsmodels.stats.anova import anova_lm
-from statsmodels.graphics.factorplots import interaction_plot
-from scipy import stats
 import warnings
+warnings.filterwarnings('ignore')
+import pandas as pd
+import matplotlib
+pd.set_option("display.width", 100)
+import matplotlib.pylab as plt
+import re
+from statsmodels.compat import urlopen
+import numpy as np
+np.set_printoptions(precision=5, suppress=True)
+import seaborn
+from statsmodels.formula.api import ols
+from statsmodels.graphics.api import interaction_plot, abline_plot
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+from statsmodels.stats.anova import anova_lm
+from scipy import stats
+import matplotlib.cm as cm
+#from __future__ import print_function
+warnings.filterwarnings('ignore')
 
+print (' ')
+print (' ')
+print ('               Welcome to ANowoa.py')
+print ('               -- by Niam Moltta --')
+print ('                     ~~/\//V\ ')
+print (' ')
+print (' ')
+print (' ')
 
-print ' '
-print ' '
-print '               Welcome to ANowoa.py'
-print '               -- by Niam Moltta --'
-print '                     ~~/\//V\ '
-print ' '
-print ' '
-print ' '
+print ("Application: Analysis of Variance (ANOVA).\n\nINSTRUCTIONS:\n\n- Make sure that the .csv file is in the same folder of this script.\n- To start, enter the name of the file without 'quotes' and ending with .csv\n  Example: scores.csv\n- Enter 'ya' to select number of ways again.\n- Enter 'ya' to quit.\n- Select file, select columns to analyze by group.\n- Returns Analysis of Variance between two or more group means.\n- Returns Degrees of Freedom, Sum of Squares, Mean Square.\n- Returns F-value and p-value.\n- Returns Eta squared and Omega squared for effect size.\n")
 
-print "Application: Analysis of Variance (ANOVA).\n\nINSTRUCTIONS:\n\n- Make sure that the .csv file is in the same folder of this script.\n- To start, enter the name of the file without 'quotes' and ending with .csv\n  Example: scores.csv\n- Enter 'ya' to select number of ways again.\n- Enter 'ya' to quit.\n- Select file, select columns to analyze by group.\n- Returns Analysis of Variance between two or more group means.\n- Returns Degrees of Freedom, Sum of Squares, Mean Square.\n- Returns F-value and p-value.\n- Returns Eta squared and Omega squared for effect size.\n"
-
-fhand = raw_input('Enter file name: ')
+fhand = raw_input('Enter .csv file name: ')
 
 filecsv = str(fhand)
 
-if filecsv == '':
+if filecsv == (''):
     print(' ')
     print ('Ciao, human!')
     print(' ')
     exit()
+'''    
+elif re.findall('^http.*$', filecsv):
     
+    try:
+
+        url = urlopen(filecsv)
+        dataframe = pd.read_table(url)
+        last = re.findall('^http.*/([a-z].+[a-z])$', filecsv)
+        dataframe.to_csv(str(last))
+
+    # possible conflict: S(proa) X(socio) E(educa) M(sexo)       
+    except:
+'''        
 data = pd.read_csv(filecsv)
 
-print ' '
+print (' ')
 
 frame = pd.DataFrame(data)
 
 coolist = frame.columns
 columns = np.asarray(coolist)
 
-
 while True:
 
     ways = raw_input('Enter number of ways to conduct the ANOVA 1/2: ')
-    print ' '
+    print (' ')
     hm = str(ways)
 
     if (hm == '') | (hm == '0'):
         break
     
-    elif hm == 'ya':
+    elif hm == ('ya'):
         break
 
-    elif hm == '1':
+    elif hm == ('1'):
                 
-        print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
-        print columns
-        print ' '
+        print ('Columns in', re.findall('(.+?).csv', filecsv), 'are:\n')
+        print (columns)
+        print (' ')
             
         hand1 = raw_input('Enter first column header: ')
-        print ' '         
+        print (' ')        
         if (hand1 == 'ya') | (hand1 == ''):
-            print ' '
+            print (' ')
             continue
         handg = raw_input('Enter "by group" column header: ')
 
-        print ' '    
+        print (' ')   
             
         column1 = str(hand1)
         column2 = str(handg)
             
         # ONE WAY ANOVA:
         
-        print ' '
+        print (' ')
         grps = pd.unique(data[column2].values)
         d_data = {grp:data[column1][data[column2] == grp] for grp in grps}
         k = len(pd.unique(data[column2]))
         N = len(data.values)
         n = data.groupby(data[column2]).size()
 
-        print 'Number of conditions:'
-        print 'k =', k
-        print ' '
-        print 'Conditions times participants:'
-        print 'N =', N
-        print ' '
-        print 'Participants in each condition:'
-        print 'n =', n
+        print ('Number of conditions:')
+        print ('k =', k)
+        print (' ')
+        print ('Conditions times participants:')
+        print ('N =', N)
+        print (' ')
+        print ('Participants in each condition:')
+        print ('n =', n)
         
         DFbetween = k - 1
         DFwithin = N - k
         DFtotal = N - 1
-        print ' '
-        print 'Degrees of freedom:'
-        print 'DFbetween =', DFbetween
-        print 'DFwithin =', DFwithin
-        print 'DFtotal =', DFtotal
-        print ' '
+        print (' ')
+        print ('Degrees of freedom:')
+        print ('DFbetween =', DFbetween)
+        print ('DFwithin =', DFwithin)
+        print ('DFtotal =', DFtotal)
+        print (' ')
         SSbetween = (sum(data.groupby(data[column2]).sum()[column1]**2)/n)-(data[column1].sum()**2)/N
-        print 'Sum of Squares:'
-        print 'SSbetween =', SSbetween
-        print ' '
+        print ('Sum of Squares:')
+        print ('SSbetween =', SSbetween)
+        print (' ')
         Y2 = sum([value**2 for value in data[column1].values])
         SSwithin = Y2 - sum(data.groupby(data[column2]).sum()[column1]**2)/n
         SStotal = Y2 - (data[column1].sum()**2)/N
-        print 'SSwithin =', SSwithin
-        print ' '
-        print 'SStotal =', SStotal
-        print ' '
+        print ('SSwithin =', SSwithin)
+        print (' ')
+        print ('SStotal =', SStotal)
+        print (' ')
         MSbetween = SSbetween/DFbetween
         MSwithin = SSwithin/DFwithin
-        print 'Mean Square:'
-        print 'MSbetween =', MSbetween
-        print ' '
-        print 'MSwithin =', MSwithin
-        print ' '
+        print ('Mean Square:')
+        print ('MSbetween =', MSbetween)
+        print (' ')
+        print ('MSwithin =', MSwithin)
+        print (' ')
         F = MSbetween / MSwithin
         p = stats.f.sf(F, DFbetween, DFwithin)
         print 'F =', F
@@ -154,15 +172,15 @@ while True:
         plt.ylabel(column2)
         plt.show(fig1)
 
-    elif hm == '2':
+    elif hm == '2': 
 
         print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
         print columns
         print ' '
         
-        #hand0 = raw_input('Enter the ID column name: ')
-        
-        hand1 = raw_input('Enter "by group" data: ')
+        #hand0 = raw_input('Enter "by group" column header: ')
+        #print ' '
+        hand1 = raw_input('Enter "by group" column header: ')
         print ' '
         
         if hand1 == 'ya':
@@ -171,62 +189,102 @@ while True:
         elif hand1 == '':
             break
                 
-        hand2 = raw_input('Enter X data: ')
+        hand2 = raw_input('Enter variable "X" column header: ')
         print ' '
 
-        hand3 = raw_input('Enter Y data: ')
+        hand3 = raw_input('Enter variable "Y" column header: ')
         print ' '
 
-        #column1 = str(hand0)
-        column2 = str(hand1)
-        column3 = str(hand2)
-        column4 = str(hand3)
+        #M = str(hand0)
+        E = str(hand1)
+        X = str(hand2)
+        S = str(hand3)
 
         # TWO WAYS:
 
-        print 'Drawing preview of data'
+        print ' '
         
-        plotting.scatter_matrix(data[[column2, column3, column4]])
-        plt.show()
-        print '1'
-        stats.ttest_ind(data[column3], data[column4])
-        print '2'
-        stats.ttest_rel(data[column3], data[column4])
-        print '3'
-        stats.ttest_1samp(data[column3], data[column4])
-        print '4'
-        plt.show()
+        plt.figure(figsize=(10,8))
+
+        name1 = min(data[E])
+        name2 = max(data[E])
+        res = name2 - name1
+        N = int(name2)
+
+        groups = data.groupby(data[E])#, data[M]])
         
+        if N == 2:
+            colors = ['blue', 'red']
+            namex = colors
+        elif N == 3:
+            colors = ['blue', 'red', 'yellow']
+            namex = colors
+        elif N == 4:
+            colors = ['blue', 'red', 'yellow', 'green']
+            namex = colors
+        elif N == 5:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple']
+            namex = colors
+        elif N == 6:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown']
+            namex = colors
+        elif N == 7:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange']
+            namex = colors
+        elif N == 8:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver']
+            namex = colors
+        elif N == 9:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta']
+            namex = colors
+        elif N == 10:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan']
+            namex = colors
+        elif N == 11:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black']
+            namex = colors
+        else:
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
+            namex = colors
+            
+        s = [200*2**n for n in range(len(groups))]
+        
+        for values, group in groups:
+            i,j = values, group
+            plt.scatter(group[X], group[S], s=s, c=colors, edgecolors='black')
+
+        nomen = str(E)+' is distributed by colors: '+str(namex)+'\n*The sphere expands as the value increases.'
+
+        nomenclature = nomen
+
+        plt.title(nomenclature)
+        plt.xlabel(X);
+        plt.ylabel(S);
+        plt.show()
+
         '''
-        WORKING ON IT:
-        figs = interaction_plot(data.dose, data.supp, data.len,
-             colors=['red','blue'], markers=['D','^'], ms=10)
+        print ' '
+        XoY = stats.ttest_ind(data[column3], data[column4])
+        print 'T test for X and Y ready (ind)'
+        XyY = stats.ttest_rel(data[column3], data[column4])
+        print 'T test for X and Y ready (rel)'
+        xyy = stats.ttest_1samp(data[column3], data[column4])
+        print 'T test for X and Y ready (1samp)'
 
-        N = len(data.len)
-        df_a = len(data.supp.unique()) - 1
-        df_b = len(data.dose.unique()) - 1
-        df_axb = df_a*df_b 
-        df_w = N - (len(data.supp.unique())*len(data.dose.unique()))
-
-        grand_mean = data['len'].mean()
-
-        #datas = [[column2, column3, column4]]
-
-        formula = 'len ~ C(supp) + C(dose) + C(supp):C(dose)'
-        model = ols(formula, datas).fit()
+        strings = "'"+str(column3)+' ~ '+str(column2)+' + '+str(column4)+"'"
+       
+        formula = str(strings)
+        print 'Formula ready'
+        print formula
+        model = smf.ols(formula, data=data).fit()
+        print 'model ready'
+        print model.summary()
+        
         aov_table = anova_lm(model, typ=2)
         eta_squared(aov_table)
         omega_squared(aov_table)
         
         print aov_table
-        
-        #sub = data[[column1, column2, column3, column4]]
-        #sub_data = sub.copy()
-        
-        # data must be standardized
-        #warnings.filterwarnings('ignore') 
-        #seaborn.pairplot(sub_data);
-        #plt.show()
         '''
         print ' '
 
