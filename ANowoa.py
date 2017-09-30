@@ -326,17 +326,17 @@ while True:
         
         XoY = stats.ttest_ind(data[X], data[S])
 
-        print 'T test for X and Y ready (ind):', XoY
+        print 'T test for X and Y ready (ind):\n', XoY
         print ' '
 
         XyY = stats.ttest_rel(data[X], data[S])
 
-        print 'T test for X and Y ready (rel)', XyY
+        print 'T test for X and Y ready (rel):\n', XyY
         print ' '
 
         xyy = stats.ttest_1samp(data[X], data[S])
 
-        print 'T test for X and Y ready (1samp)', xyy
+        print 'T test for X and Y ready (1samp) as xyy'
         print ' '
 
         Y = data[S]
