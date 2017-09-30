@@ -22,7 +22,7 @@ from statsmodels.formula.api import ols
 from statsmodels.graphics.api import interaction_plot, abline_plot
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
-from statsmodels.stats.anova import anova_lm
+from statsmodels.stats.anova import anova_lm as lm
 from scipy import stats
 import matplotlib.cm as cm
 #from __future__ import print_function
@@ -272,11 +272,11 @@ while True:
 
             break
                 
-        hand2 = raw_input('Enter variable "X" column header: ')
+        hand2 = raw_input('Enter independent variable "X" column header: ')
 
         print ' '
 
-        hand3 = raw_input('Enter variable "Y" column header: ')
+        hand3 = raw_input('Enter dependent variable "Y" column header: ')
 
         print ' '
 
@@ -300,7 +300,7 @@ while True:
 
         colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
 
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(figsize=(10,8))
 
         #s = [100*2**n for n in range(len(groups))]
 
@@ -351,17 +351,26 @@ while True:
 
         print model.summary()
         print ' '
-        #n =
 
-        #lm.model.exog[:n]
+        nplus = int(N)+1
 
-        #influence = lm.get_influence()
+        n = int(nplus)
 
-        aov_table = anova_lm(model, typ=2)
+        anova = lm(model)
 
-        #eta_squared(aov_table)
+        aov_table = lm(model, typ=2)
 
-        #omega_squared(aov_table)
+
+        #infl = lm.get_influence(aov_table)
+
+        #print 'INFLUENCE SUMMARY TABLE:'
+        #print ' '
+        #print infl.summary_table()
+        #print ' '
+
+        #lm.eta_squared(model)
+
+        #lm.omega_squared(model)
 
         print 'ANALYSIS OF VARIANCE (ANOVA) TABLE:'
         print ' '
