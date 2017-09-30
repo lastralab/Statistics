@@ -96,6 +96,7 @@ The main **INSTRUCTIONS** for all of them are very simple:
   - Returns Degrees of Freedom, Sum of Squares, Mean Square <br>
   - Returns F-value and p-value <br>
   - Returns Eta squared and Omega squared for effect size  <br>
+  - Returns ANOVA table and variables scatter graph
   <br><br>
 
 <!--<img src="" width=50%/><img src="" width=50%/><br>-->
