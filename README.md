@@ -6,10 +6,11 @@ Capstone Project for <a href="https://www.coursera.org/specializations/python">C
 <img src="https://user-images.githubusercontent.com/22894897/31048907-89598960-a5fe-11e7-881e-c2081dd9edd8.png" width="100%"/>
 <br>
 
-I downloaded data files from http://www.inegi.org.mx/ and I wrote Python programs to read, extract, analyze and visualize that data, in a way that anyone can use them for their own purposes, by entering the name of their own files:
+I downloaded data files from http://www.inegi.org.mx/, I designed a variable called ProA (Pro-environment), based on the home's levels of consumption of products that generate pollution and the frequency in which they invested on repairments instead of throwing them away. I wrote Python programs to read, extract, analyze and visualize that data, in a way that anyone can use them for their own purposes, by entering the name of their own files:
 
 The main **INSTRUCTIONS** for all of them are very simple:
 
+- The files must be in the same folder of the scripts.
 - Select file.
 - Select column header.
 - Select alpha (if applies).
