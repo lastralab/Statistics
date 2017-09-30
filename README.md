@@ -98,7 +98,7 @@ The main **INSTRUCTIONS** for all of them are very simple:
   - Returns Eta squared and Omega squared for effect size  <br>
   - Returns ANOVA table and variables scatter graph
   <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/31048484-34411fba-a5f4-11e7-8dca-d15228664176.png" height=350px/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" height=350px/><br>
+<img src="https://user-images.githubusercontent.com/22894897/31048484-34411fba-a5f4-11e7-8dca-d15228664176.png" height="300px"/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" height="300px"/><br>
 <br><br>
 <br><br>
 More data visualization coming soon...
