@@ -37,7 +37,7 @@ print (' ')
 print (' ')
 print (' ')
 
-print ("Application: Analysis of Variance (ANOVA).\n\nINSTRUCTIONS:\n\n- Make sure that the .csv file is in the same folder of this script.\n- To start, enter the name of the file without 'quotes' and ending with .csv\n  Example: scores.csv\n- Enter 'ya' to select number of ways again.\n- Enter 'ya' to quit.\n- Select file, select columns to analyze by group.\n- Returns Analysis of Variance between two or more group means.\n- Returns Degrees of Freedom, Sum of Squares, Mean Square.\n- Returns F-value and p-value.\n- Returns Eta squared and Omega squared for effect size.\n")
+print ("Application: Analysis of Variance (ANOVA).\n\nINSTRUCTIONS:\n\n- Make sure that the .csv file is in the same folder of this script.\n- To start, enter the name of the file without 'quotes' and ending with .csv\n  Example: scores.csv\n- Enter 'ya' to select number of ways again.\n- Enter 'ya' to quit.\n- Select file, select columns to analyze by group.\n- Returns Analysis of Variance between two or more group means.\n- Returns Degrees of Freedom, Sum of Squares, Mean Square.\n- Returns F-value and p-value.\n- Returns Eta squared and Omega squared for effect size.\n- Returns scatter graph of selected variables.\n")
 
 fhand = raw_input('Enter .csv file name: ')
 
@@ -203,8 +203,6 @@ while True:
         # TWO WAYS:
 
         print ' '
-        
-        plt.figure(figsize=(10,8))
 
         name1 = min(data[E])
         name2 = max(data[E])
@@ -212,48 +210,17 @@ while True:
         N = int(name2)
 
         groups = data.groupby(data[E])#, data[M]])
-        
-        if N == 2:
-            colors = ['blue', 'red']
-            namex = colors
-        elif N == 3:
-            colors = ['blue', 'red', 'yellow']
-            namex = colors
-        elif N == 4:
-            colors = ['blue', 'red', 'yellow', 'green']
-            namex = colors
-        elif N == 5:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple']
-            namex = colors
-        elif N == 6:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown']
-            namex = colors
-        elif N == 7:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange']
-            namex = colors
-        elif N == 8:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver']
-            namex = colors
-        elif N == 9:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta']
-            namex = colors
-        elif N == 10:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan']
-            namex = colors
-        elif N == 11:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black']
-            namex = colors
-        else:
-            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
-            namex = colors
-            
-        s = [200*2**n for n in range(len(groups))]
-        
-        for values, group in groups:
-            i,j = values, group
-            plt.scatter(group[X], group[S], s=s, c=colors, edgecolors='black')
 
-        nomen = str(E)+' is distributed by colors: '+str(namex)+'\n*The sphere expands as the value increases.'
+        colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
+
+        fig, ax = plt.subplots()
+
+        s = [300*2**n for n in range(len(groups))]
+
+        for key, group in groups:
+            group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.25, s=s)
+
+        nomen = 'variable "'+str(E)+'" is represented by colors'
 
         nomenclature = nomen
 
@@ -262,7 +229,7 @@ while True:
         plt.ylabel(S);
         plt.show()
 
-        '''
+        ''' working on this...
         print ' '
         XoY = stats.ttest_ind(data[column3], data[column4])
         print 'T test for X and Y ready (ind)'
