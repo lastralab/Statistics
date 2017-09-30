@@ -15,7 +15,7 @@ Education: From zero to masters/graduate completed (0-11).
 <img src="https://user-images.githubusercontent.com/22894897/31048907-89598960-a5fe-11e7-881e-c2081dd9edd8.png" width="100%"/>
 <br>
 
-The main **INSTRUCTIONS** for all of them are very simple:
+The main **INSTRUCTIONS** for the programs are very simple:
 
 - The files must be in the same folder of the scripts.
 - Select file.
