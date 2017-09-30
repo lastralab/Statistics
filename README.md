@@ -2,6 +2,7 @@
 
 Capstone Project for <a href="https://www.coursera.org/specializations/python">Coursera Specialization</a>: "Retrieving, Processing, and Visualizing Data with Python".
 <br>
+<img src="https://user-images.githubusercontent.com/22894897/31048917-fcbba758-a5fe-11e7-986c-48db5fc92e1a.png" width="100%"/><br>
 <img src="https://user-images.githubusercontent.com/22894897/31048907-89598960-a5fe-11e7-881e-c2081dd9edd8.png" width="100%"/>
 <br>
 
