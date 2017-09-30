@@ -29,17 +29,12 @@ import matplotlib.cm as cm
 warnings.filterwarnings('ignore')
 
 print (' ')
-
 print (' ')
-
 print ('               Welcome to ANowoa.py')
 print ('               -- by Niam Moltta --')
 print ('                     ~~/\//V\ ')
-
 print (' ')
-
 print (' ')
-
 print (' ')
 
 print ("Application: Analysis of Variance (ANOVA).\n\nINSTRUCTIONS:\n\n- Make sure that the .csv file is in the same folder of this script.\n- To start, enter the name of the file without 'quotes' and ending with .csv\n  Example: scores.csv\n- Enter 'ya' to select number of ways again.\n- Enter 'ya' to quit.\n- Select file, select columns to analyze by group.\n- Returns Analysis of Variance between two or more group means.\n- Returns Degrees of Freedom, Sum of Squares, Mean Square.\n- Returns F-value and p-value.\n- Returns Eta squared and Omega squared for effect size.\n- Returns scatter graph of selected variables.\n")
@@ -49,17 +44,11 @@ fhand = raw_input('Enter .csv file name: ')
 filecsv = str(fhand)
 
 if filecsv == (''):
-
     print(' ')
-    
     print ('Ciao, human!')
-    
     print(' ')
-    
     exit()
-
-    '''    
-
+'''    
 elif re.findall('^http.*$', filecsv):
     
     try:
@@ -72,7 +61,6 @@ elif re.findall('^http.*$', filecsv):
     # possible conflict: S(proa) X(socio) E(educa) M(sexo)       
     except:
 '''        
-
 data = pd.read_csv(filecsv)
 
 print (' ')
@@ -320,66 +308,69 @@ while True:
 
         fig, ax = plt.subplots()
 
-        s = [100*2**n for n in range(len(groups))]
+        #s = [100*2**n for n in range(len(groups))]
 
-        for key, group in groups:
-            group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.25, s=s)
+        #for key, group in groups:
+            #group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.25, s=300)
 
         nomen = 'variable "'+str(E)+'" is represented by colors'
 
         nomenclature = nomen
 
-        plt.title(nomenclature)
-        
-        plt.xlabel(X);
+        #plt.title(nomenclature)       
+        #plt.xlabel(X);
+        #plt.ylabel(S);
+        #plt.show()
 
-        plt.ylabel(S);
-
-        plt.show()
-
-        ''' working on this:
         print ' '
         
-        XoY = stats.ttest_ind(data[column3], data[column4])
+        XoY = stats.ttest_ind(data[X], data[S])
 
-        print 'T test for X and Y ready (ind)'
+        print 'T test for X and Y ready (ind):', XoY
+        print ' '
 
-        XyY = stats.ttest_rel(data[column3], data[column4])
+        XyY = stats.ttest_rel(data[X], data[S])
 
-        print 'T test for X and Y ready (rel)'
+        print 'T test for X and Y ready (rel)', XyY
+        print ' '
 
-        xyy = stats.ttest_1samp(data[column3], data[column4])
+        xyy = stats.ttest_1samp(data[X], data[S])
 
-        print 'T test for X and Y ready (1samp)'
+        print 'T test for X and Y ready (1samp)', xyy
+        print ' '
 
-
-        strings = "'"+str(column3)+' ~ '+str(column2)+' + '+str(column4)+"'"
+        Y = data[S]
+        Group = data[E]
+        X = data[X]
     
+        formula = 'Y ~ C(Group) + C(X)'
 
-        formula = str(strings)
+        print 'Formula ready:', formula
 
-        print 'Formula ready'
+        print ' '
 
-        print formula
+        model = ols(formula, data=data).fit()
 
-        model = smf.ols(formula, data=data).fit()
-
-        print 'model ready'
+        print 'MODEL SUMMARY:'
+        print ' '
 
         print model.summary()
+        print ' '
+        #n =
 
-        
+        #lm.model.exog[:n]
+
+        #influence = lm.get_influence()
+
         aov_table = anova_lm(model, typ=2)
 
-        eta_squared(aov_table)
+        #eta_squared(aov_table)
 
-        omega_squared(aov_table)
+        #omega_squared(aov_table)
 
-        
-
+        print 'ANALYSIS OF VARIANCE (ANOVA) TABLE:'
+        print ' '
         print aov_table
-
-        '''
 
         print ' '
 
