@@ -5,20 +5,20 @@ Capstone Project for <a href="https://www.coursera.org/specializations/python">C
 I downloaded data files from http://www.inegi.org.mx/, and I designed a variable called ProAmbiente (Pro-environment), based on each home's level of consumption of products that generate pollution and the frequency in which they invested on repairments instead of throwing them away. I wrote Python programs to read, extract, analyze and visualize that data, in a way that anyone can use them for their own purposes, by entering the name of their own files.
 <br><br>
 **Visualizing data:**<br><br>
-Gender of person who supports economically the house:<br><br>
+Gender of person who supports economically the house (sexo_jefe):<br><br>
 1) Male <br>
 2) Female <br>
 <br>
-Education: From zero to masters/graduate completed (0-11).<br>
+Education (educa_jefe): From zero to masters/graduate completed (0-11).<br>
 <br>
-Socioeconomic class (determined by each home's physical properties): From Low to High (1-4).<br>
+Socioeconomic class (est_socio: determined by each home's physical properties): From Low to High (1-4).<br>
 <br><img src="https://user-images.githubusercontent.com/22894897/31057016-f6c2da48-a6b1-11e7-9561-3abd56f6e093.png" width="100%"/>
 <img src="https://user-images.githubusercontent.com/22894897/31057015-f632e820-a6b1-11e7-945d-5977c2c26f15.png" width="100%"/>
 <img src="https://user-images.githubusercontent.com/22894897/31057028-41d59886-a6b2-11e7-8bfb-6d9af8329918.png" width="100%"/>
 <br><br>
-Other interesting results:<br>
+**Other interesting results:**<br>
 <br>
-<img src="https://user-images.githubusercontent.com/22894897/31058439-e4c14c22-a6c9-11e7-88ec-3c72a46f2a26.png" width="50%"/><img src="https://user-images.githubusercontent.com/22894897/31058445-ec0591aa-a6c9-11e7-90d7-e664c996e127.png" width="50%"/><br>
+<p><img src="https://user-images.githubusercontent.com/22894897/31058439-e4c14c22-a6c9-11e7-88ec-3c72a46f2a26.png" width="50%"/><img src="https://user-images.githubusercontent.com/22894897/31058445-ec0591aa-a6c9-11e7-90d7-e664c996e127.png" width="50%"/><br></p>
 <br>
 
 The main **INSTRUCTIONS** for the programs are very simple:
@@ -116,7 +116,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns Eta squared and Omega squared for effect size  <br>
   - Returns ANOVA table and variables scatter graph
   <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/31058523-73d82af6-a6cb-11e7-82be-20f3b7bc9c33.png" width=50% height="300px"/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" width=50%/><br>
+<img src="https://user-images.githubusercontent.com/22894897/31058523-73d82af6-a6cb-11e7-82be-20f3b7bc9c33.png" width=60%/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" width=40%/><br>
 <br><br>
 <br><br>
 More data visualization coming soon...
