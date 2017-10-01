@@ -8,14 +8,13 @@ I downloaded data files from http://www.inegi.org.mx/, and I designed a variable
 Gender of person who supports economically the house (sexo_jefe):<br>
 1) Male <br>
 2) Female <br>
-<br>
+<img src="https://user-images.githubusercontent.com/22894897/31057016-f6c2da48-a6b1-11e7-9561-3abd56f6e093.png" width="95%"/><br>
 Education (educa_jefe): From zero to masters/graduate completed (0-11).<br>
-Socioeconomic class (est_socio: determined by each home's physical properties): From Low to High (1-4).<br>
-<img src="https://user-images.githubusercontent.com/22894897/31057016-f6c2da48-a6b1-11e7-9561-3abd56f6e093.png" width="950%"/>
 <img src="https://user-images.githubusercontent.com/22894897/31057015-f632e820-a6b1-11e7-945d-5977c2c26f15.png" width="95%"/>
+Socioeconomic class (est_socio: determined by each home's physical properties): From Low to High (1-4).<br>
 <img src="https://user-images.githubusercontent.com/22894897/31057028-41d59886-a6b2-11e7-8bfb-6d9af8329918.png" width="95%"/>
 <br>
-* Other interesting results:<br>
+* Other interesting results (total_int = number of members per home):<br>
 <br>
 <p><img src="https://user-images.githubusercontent.com/22894897/31058439-e4c14c22-a6c9-11e7-88ec-3c72a46f2a26.png" width="50%"/><img src="https://user-images.githubusercontent.com/22894897/31058445-ec0591aa-a6c9-11e7-90d7-e664c996e127.png" width="50%"/><br></p>
 <br>
