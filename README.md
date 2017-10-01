@@ -16,7 +16,7 @@ Socioeconomic class (est_socio: determined by each home's physical properties): 
 <img src="https://user-images.githubusercontent.com/22894897/31057015-f632e820-a6b1-11e7-945d-5977c2c26f15.png" width="100%"/>
 <img src="https://user-images.githubusercontent.com/22894897/31057028-41d59886-a6b2-11e7-8bfb-6d9af8329918.png" width="100%"/>
 <br><br>
-**Other interesting results:**<br>
+* Other interesting results:<br>
 <br>
 <p><img src="https://user-images.githubusercontent.com/22894897/31058439-e4c14c22-a6c9-11e7-88ec-3c72a46f2a26.png" width="50%"/><img src="https://user-images.githubusercontent.com/22894897/31058445-ec0591aa-a6c9-11e7-90d7-e664c996e127.png" width="50%"/><br></p>
 <br>
