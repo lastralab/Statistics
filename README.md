@@ -69,7 +69,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns factors for that range
   - New file with data split by intervals
 <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/30775730-ddb76822-a06f-11e7-907a-4b892353f880.png" height=350px/><img src="https://user-images.githubusercontent.com/22894897/30775757-7f0a2d18-a070-11e7-93d8-eae1feef4574.png" height=350px/><br><br>  
+<img src="https://user-images.githubusercontent.com/22894897/30775730-ddb76822-a06f-11e7-907a-4b892353f880.png" width=50% height=350px/><img src="https://user-images.githubusercontent.com/22894897/30775757-7f0a2d18-a070-11e7-93d8-eae1feef4574.png" width=50% height=350px/><br><br>  
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/SkewU.py"><b>SkewU.py</b></a><br>
   - Skewness calculation
@@ -118,7 +118,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns Eta squared and Omega squared for effect size  <br>
   - Returns ANOVA table and variables scatter graph
   <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/31058523-73d82af6-a6cb-11e7-82be-20f3b7bc9c33.png" height="300px"/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" height="400px"/><br>
+<img src="https://user-images.githubusercontent.com/22894897/31058523-73d82af6-a6cb-11e7-82be-20f3b7bc9c33.png" width=50% height="300px"/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" width=50% height="400px"/><br>
 <br><br>
 <br><br>
 More data visualization coming soon...
