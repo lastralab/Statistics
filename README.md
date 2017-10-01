@@ -19,7 +19,7 @@ Socioeconomic class (determined by each home's physical properties): From Low to
 <br><br>
 Other interesting results:
 <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/31058439-e4c14c22-a6c9-11e7-88ec-3c72a46f2a26.png" max-width="50%"/><img src="https://user-images.githubusercontent.com/22894897/31058445-ec0591aa-a6c9-11e7-90d7-e664c996e127.png" max-width="50%"/>
+<img src="https://user-images.githubusercontent.com/22894897/31058439-e4c14c22-a6c9-11e7-88ec-3c72a46f2a26.png" width="50%"/><img src="https://user-images.githubusercontent.com/22894897/31058445-ec0591aa-a6c9-11e7-90d7-e664c996e127.png" width="50%"/>
 <br><br>
 
 The main **INSTRUCTIONS** for the programs are very simple:
@@ -117,7 +117,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns Eta squared and Omega squared for effect size  <br>
   - Returns ANOVA table and variables scatter graph
   <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/31058523-73d82af6-a6cb-11e7-82be-20f3b7bc9c33.png" max-width=50% height="300px"/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" max-width=50% height="400px"/><br>
+<img src="https://user-images.githubusercontent.com/22894897/31058523-73d82af6-a6cb-11e7-82be-20f3b7bc9c33.png" width=50% height="400px"/><img src="https://user-images.githubusercontent.com/22894897/31048485-35bf2116-a5f4-11e7-8239-a48707fc0e46.png" width=50% height="300px"/><br>
 <br><br>
 <br><br>
 More data visualization coming soon...
