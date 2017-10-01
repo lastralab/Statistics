@@ -9,12 +9,14 @@ Gender of person who supports economically the house:<br><br>
 1) Male <br>
 2) Female <br>
 <br>
-Education: From zero to masters/graduate completed (0-11).
-<br><br>
-<img src="https://user-images.githubusercontent.com/22894897/31048917-fcbba758-a5fe-11e7-986c-48db5fc92e1a.png" width="100%"/><br>
-<img src="https://user-images.githubusercontent.com/22894897/31048907-89598960-a5fe-11e7-881e-c2081dd9edd8.png" width="100%"/>
+Education: From zero to masters/graduate completed (0-11).<br>
 <br>
-
+Socioeconomic class (determined by each home's physical properties): From Low to High (1-4).<br>
+<br><br>
+<img src="https://user-images.githubusercontent.com/22894897/31057016-f6c2da48-a6b1-11e7-9561-3abd56f6e093.png" width="100%"/><br>
+<img src="https://user-images.githubusercontent.com/22894897/31057015-f632e820-a6b1-11e7-945d-5977c2c26f15.png" width="100%"/><br>
+<img src="https://user-images.githubusercontent.com/22894897/31057028-41d59886-a6b2-11e7-8bfb-6d9af8329918.png" width="100%"/>
+<br>
 The main **INSTRUCTIONS** for the programs are very simple:
 
 - The files must be in the same folder of the scripts.
