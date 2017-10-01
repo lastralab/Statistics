@@ -302,10 +302,16 @@ while True:
 
         fig, ax = plt.subplots(figsize=(10,8))
 
-        #s = [100*2**n for n in range(len(groups))]
+        if len(groups) < 5:
+
+            s = 100  #[20*2**n for n in range(len(groups))]
+
+        else:
+            
+            s = 150
 
         for key, group in groups:
-            group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.25, s=300)
+            group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.3, s=s)
 
         nomen = 'variable "'+str(E)+'" is represented by colors'
         nomenclature = nomen
