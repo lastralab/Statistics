@@ -10,18 +10,8 @@ Gender of person who supports economically the house (sexo_jefe):<br>
 2) Female <br>
 <img src="https://user-images.githubusercontent.com/22894897/31057016-f6c2da48-a6b1-11e7-9561-3abd56f6e093.png" width="90%"/><br>
 Education (educa_jefe): From zero to masters/graduate completed (0-11).<br>
-  0) Nada   
-  1) Kinder  
-  2) Primaria (trunca)    
-    3) Primaria (terminada)   
-  4) Secundaria (trunca)     
-    5) Secundaria (terminada)      
-6) Preparatoria (trunca)    
-  7) Preparatoria (terminada)   
-8) Carrera técnica (terminada)    
-9) Licenciatura (trunca)       
-  10) Licenciatura (terminada)    
-11) Posgrado (terminado)
+  Keys (originals): 0) Nada, 1) Kinder, 2) Primaria (trunca), 3) Primaria (terminada), 4) Secundaria (trunca), 5) Secundaria (terminada), 
+  6) Preparatoria (trunca), 7) Preparatoria (terminada), 8) Carrera técnica (terminada), 9) Licenciatura (trunca), 10) Licenciatura (terminada), 11) Posgrado (terminado)
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/31057015-f632e820-a6b1-11e7-945d-5977c2c26f15.png" width="90%"/>
 Socioeconomic class (est_socio: determined by each home's physical properties): From Low to High (1-4).<br>
