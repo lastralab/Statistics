@@ -57,7 +57,8 @@ The main **INSTRUCTIONS** for the programs are very simple:
   
 - <a href="https://github.com/lastralab/Statistics/blob/master/ConverS.py"><b>ConverS.py</b></a><br>
   - Value replacement (I used it to convert string characters into integer values)
-  - You need to modify this code in order to convert your own data
+    - Example: I converted keys like "K023", which referred to buying solar panels or having an alternative electricity source ("Compra e   instalación de paneles solares y planta de luz propia") into a value that contributes to the overall score variable I created.
+  - Note: You need to modify this code in order to convert your own data
 
 - <a href="https://github.com/lastralab/Statistics/blob/master/RangeR.py"><b>RangeR.py</b></a><br>
   - Values assignment to Intervals
