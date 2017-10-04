@@ -5,14 +5,15 @@
 # License: MIT
 # One way or another...
 # One and Two ways ANOVA conducting with Python
-#%matplotlib inline
+# %matplotlib inline
 
 import warnings
 warnings.filterwarnings('ignore')
 import pandas as pd
-import matplotlib
+import matplotlib.axes
 pd.set_option("display.width", 100)
 import matplotlib.pylab as plt
+import matplotlib
 import re
 from statsmodels.compat import urlopen
 import numpy as np
@@ -25,7 +26,6 @@ import statsmodels.formula.api as smf
 from statsmodels.stats.anova import anova_lm as lm
 from scipy import stats
 import matplotlib.cm as cm
-#from __future__ import print_function
 warnings.filterwarnings('ignore')
 
 print (' ')
@@ -254,119 +254,253 @@ while True:
 
         print ' '
         
-        #hand0 = raw_input('Enter "by group" column header: ')
-
-        #print ' '
-
-        hand1 = raw_input('Enter "by group" column header: ')
+        hand0 = raw_input('Enter "by Group A" column header: ')
 
         print ' '
-        
-        if hand1 == 'ya':
+
+        if hand0 == 'ya':
 
             print ' '
 
             continue
 
-        elif hand1 == '':
+        elif hand0 == '':
 
             break
+
+        hand1 = raw_input('Enter "by Group B", or hit Return to continue: ')
+
+        if hand1 == '':
                 
-        hand2 = raw_input('Enter independent variable "X" column header: ')
-
-        print ' '
-
-        hand3 = raw_input('Enter dependent variable "Y" column header: ')
-
-        print ' '
-
-        #M = str(hand0)
-
-        E = str(hand1)
-        X = str(hand2)
-        S = str(hand3)
-
-        # TWO WAYS:
-
-        print ' '
-
-        print 'Drawing preview of data...'
+            print ' '
         
-        name1 = min(data[E])
-        name2 = max(data[E])
-        res = name2 - name1
-        N = int(name2)
-        groups = data.groupby(data[E])#, data[M]])
+            hand2 = raw_input('Enter independent variable "X" column header: ')  
+            print ' '
+            
+            hand3 = raw_input('Enter dependent variable "Y" column header: ')
+            print ' '
+            
+            #M = str(hand1)
+            
+            E = str(hand0)
+            X = str(hand2)
+            S = str(hand3)
+            
+            # TWO WAY ANOVA:
+                
+            print ' '
+            
+            print 'Drawing preview of data...'
+            
+            groups = data.groupby(data[E])
+            
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
+            
+            
+            if len(groups) == 2:
 
-        colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
+                X = data[X]
+                Y = data[S]
+                
+                s = 100
+                
+                plt.figure(figsize=(8,6))
 
-        fig, ax = plt.subplots(figsize=(10,8))
+                groups = data.groupby(data[E])
+                
+                for key, group in groups:
+                    interaction_plot(X, group, np.log(Y+1), colors=['r','b'], markers=['D','^'], ms=10, ax=plt.gca())
+                
+                    plt.show() #?
+                
+            else:
 
-        if len(groups) < 5:
+                fig, ax = plt.subplots(figsize=(8,6))
+                
+                s = 100
+                
+                for key, group in groups:
+                
+                    group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.3, s=s)
+                    
+                    nomen = 'variable "'+str(E)+'" is represented by colors'
+                    nomenclature = nomen
+            
+                    plt.title(nomenclature)       
+                    plt.xlabel(X);
+                    plt.ylabel(S);
+                    plt.show()
+            
+            print ' '
+            print '--------------------------------'
+            XoY = stats.ttest_ind(data[X], data[S])
+            
+            print 'T test for X and Y (ind):\n'
+            print 't-statistic=', XoY[0], '\n\np-value=', XoY[1]
+            print ' '
+            print '--------------------------------'
+            XyY = stats.ttest_rel(data[X], data[S])
+            
+            print 'T test for X and Y (rel):\n'
+            print 't-statistic=', XyY[0], '\n\np-value=', XyY[1]
+            print ' '
+            print '--------------------------------'
+            xyy = stats.ttest_1samp(data[X], data[S])
+            
+            print 'T test for X and Y (1samp)\nReady as "xyy"'
+            print ' '
+            print '--------------------------------'
+            
+            Y = data[S]
+            Group = data[E]
+            X = data[X]
 
-            s = 100  #[20*2**n for n in range(len(groups))]
+            # f-test
+            
+            formula = 'np.log(Y+1) ~ C(Group) * C(X)'
+            
+            print 'Formula ready:', formula
+            
+            print ' '
+            
+            model = ols(formula, data=data).fit()
+            
+            print 'MODEL SUMMARY:'
+            print ' '
+            
+            print model.summary()
+            print ' '
+            
+            #aov_table = lm(model, typ=2) # ERROR Singular matrix
+            
+            #print 'ANALYSIS OF VARIANCE (ANOVA) TABLE:'
+            #print ' '
+            #print aov_table
+            print ' '
 
+            print '    Drawing INTERACTION PLOT...'
+            print ' '
+
+            
+            sumofsq = ols('np.log(Y+1) ~ C(Group, Sum) * C(X, Sum)', data=data).fit()
+
+            print ' '
+            print ' Sum of Squares'
+            print lm(sumofsq)
+            print ' '
+            print ' Type 2'
+            print lm(sumofsq, typ=2)
+            print ' '
+            print ' Type 3'
+            print lm(sumofsq, typ=3)
+            
+            print ' '
+
+            # 3 ways visualization:
+            
         else:
             
-            s = 150
+            print ' '
+            
+            hand2 = raw_input('Enter independent variable "X" column header: ')  
+            print ' '
+        
+            hand3 = raw_input('Enter dependent variable "Y" column header: ')
 
-        for key, group in groups:
-            group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.3, s=s)
+            print ' '
+                
+            M = str(hand1) 
+            E = str(hand0) 
+            X = str(hand2)
+            S = str(hand3)
+                
+                # THREE WAY ANOVA:
+                
+            print ' '
+                
+            print 'Drawing preview of data...'
 
-        nomen = 'variable "'+str(E)+'" is represented by colors'
-        nomenclature = nomen
+            print ' '
 
-        plt.title(nomenclature)       
-        plt.xlabel(X);
-        plt.ylabel(S);
-        plt.show()
+            print 'Calculating ANOVA...'
+            
+            groups = data.groupby([str(E), str(M)])
+            
+            colors = ['blue', 'red', 'yellow', 'green', 'purple', 'brown', 'orange', 'silver','magenta','cyan','black','white']
+            
+            symbols = ['o','d','^', 'h', 's', 'p', 's', 'v', '>','x','D','8','+']
+            
+            fig, ax = plt.subplots(figsize=(8,6))
+            
+            if len(groups) < 5:
+                
+                s = 10**2
+                
+            else:
+                
+                s = 81
+            
+            print ' '
 
-        print ' '
-        print '--------------------------------'
-        XoY = stats.ttest_ind(data[X], data[S])
-
-        print 'T test for X and Y (ind):\n'
-        print 't-statistic=', XoY[0], '\n\np-value=', XoY[1]
-        print ' '
-        print '--------------------------------'
-        XyY = stats.ttest_rel(data[X], data[S])
-
-        print 'T test for X and Y (rel):\n'
-        print 't-statistic=', XyY[0], '\n\np-value=', XyY[1]
-        print ' '
-        print '--------------------------------'
-        xyy = stats.ttest_1samp(data[X], data[S])
-
-        print 'T test for X and Y (1samp)\nReady as "xyy"'
-        print ' '
-        print '--------------------------------'
-
-        Y = data[S]
-        Group = data[E]
-        X = data[X]
-    
-        formula = 'Y ~ C(Group) + C(X)'
-
-        print 'Formula ready:', formula
-
-        print ' '
-
-        model = ols(formula, data=data).fit()
-
-        print 'MODEL SUMMARY:'
-        print ' '
-
-        print model.summary()
-        print ' '
-
-        aov_table = lm(model, typ=2)
-
-        print 'ANALYSIS OF VARIANCE (ANOVA) TABLE:'
-        print ' '
-        print aov_table
-
-        print ' '
-
+            for values, group in groups:
+                i, j = values
+                group.plot(ax=ax, kind='scatter', x=X, y=S, label=values, color=colors[i-1], alpha=0.3, s=s, marker=symbols[j-1], edgecolors='black')           
+                
+            nomen = 'variable "'+str(E)+'" is represented by colors\nvariable "'+str(M)+'" is represented by figures'
+            nomenclature = nomen
+            
+            plt.title(nomenclature)       
+            plt.xlabel(X);
+            plt.ylabel(S);
+            plt.show()
+            
+            print ' '
+            print '--------------------------------'
+            XoY = stats.ttest_ind(data[X], data[S])
+            
+            print 'T test for X and Y (ind):\n'
+            print 't-statistic=', XoY[0], '\n\np-value=', XoY[1]
+            print ' '
+            print '--------------------------------'
+            XyY = stats.ttest_rel(data[X], data[S])
+            
+            print 'T test for X and Y (rel):\n'
+            print 't-statistic=', XyY[0], '\n\np-value=', XyY[1]
+            print ' '
+            print '--------------------------------'
+            xyy = stats.ttest_1samp(data[X], data[S])
+            
+            print 'T test for X and Y (1samp)\nReady as "xyy"'
+            print ' '
+            print '--------------------------------'
+        
+            GroupA = data[E] 
+            Y = data[S]
+            GroupB = data[M] 
+            X = data[X]
+            
+            formula = 'Y ~ C(X) + C(GroupA) * C(GroupB)'
+            
+            print 'Formula ready:', formula
+            
+            print ' '
+            
+            model = ols(formula, data=data).fit()
+            
+            print 'MODEL SUMMARY:'
+            print ' '
+            
+            print model.summary()
+            print ' '
+            
+            aov_table = lm(model, typ=2)
+            
+            print 'ANALYSIS OF VARIANCE (ANOVA) TABLE:'
+            print ' '
+            print aov_table
+            
+            print ' '
+            
             
 print ' '
 
