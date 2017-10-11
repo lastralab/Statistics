@@ -308,7 +308,7 @@ while True:
 
                 groups = data.groupby(data[E])
                 
-                for key, group in groups:
+                for key, group in groups: # ERROR (working on it)
                     interaction_plot(X, group, np.log(Y+1), colors=['r','b'], markers=['D','^'], ms=10, ax=plt.gca())
                 
                     plt.show() #?
@@ -319,7 +319,7 @@ while True:
                 
                 s = 100
                 
-                for key, group in groups:
+                for key, group in groups: # ERROR (working on it)
                 
                     group.plot(ax=ax, kind='scatter', x=X, y=S, label=key, color=colors[key-1], alpha=0.3, s=s)
                     
@@ -442,7 +442,7 @@ while True:
             
             print ' '
 
-            for values, group in groups:
+            for values, group in groups: # ERROR (working on it)
                 i, j = values
                 group.plot(ax=ax, kind='scatter', x=X, y=S, label=values, color=colors[i-1], alpha=0.3, s=s, marker=symbols[j-1], edgecolors='black')           
                 
