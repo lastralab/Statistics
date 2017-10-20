@@ -98,14 +98,14 @@ The main **INSTRUCTIONS** for the programs are very simple:
 <img src="https://user-images.githubusercontent.com/22894897/30747475-c8ece6ac-9f83-11e7-8ec1-f1abbfd6e67c.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747478-c9e3e7a4-9f83-11e7-893f-a8706f519880.png" width=50%/><br>
   <br>
   
-- <a href="https://github.com/lastralab/Statistics/blob/master/PeaR.py"><b>PeaR.py</b></a><br>
+- <a href="https://github.com/lastralab/Statistics/blob/master/PeaR.py"><b>PeaR.py</b></a> (New error dealing with zeros)<br>
   - Returns Pearson correlation coefficient
   - Returns p-value
   - Returns graph of correlation relationship
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30765204-d0e38848-9fc4-11e7-9dd0-20916fc8a484.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30722727-303258f4-9f09-11e7-8b9a-3041fa9e7a24.png" width=50%/><br>
 
-- <a href="https://github.com/lastralab/Statistics/blob/master/SpeaR.py"><b>SpeaR.py</b></a><br>
+- <a href="https://github.com/lastralab/Statistics/blob/master/SpeaR.py"><b>SpeaR.py</b></a> (New error dealing with zeros)<br>
   - Returns Spearman correlation coefficient
   - Returns p-value
   - Returns graph of correlation relationship
@@ -113,7 +113,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
 <img src="https://user-images.githubusercontent.com/22894897/30762494-94002e6a-9fb8-11e7-833c-cde847c021d3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30762497-964f8ba2-9fb8-11e7-9b08-122380dc0beb.png" width=50%/><br>
 <br>
 
-- <a href="https://github.com/lastralab/Statistics/blob/master/ANowoa.py"><b>Anowoa.py</b></a> (Fixing errors, do not download this yet)<br><br>
+- <a href="https://github.com/lastralab/Statistics/blob/master/ANowoa.py"><b>Anowoa.py</b></a> (Error: Not recognizing integers)<br><br>
   - Performs Analysis of Variance (ANOVA), one or two ways (optional) <br> 
   - Returns Analysis of Variance between two or more group means <br>
   - Returns Degrees of Freedom, Sum of Squares, Mean Square <br>
