@@ -263,7 +263,7 @@ while True:
                 
         elif answer == 'no':
             
-            print 'KEYWORDS:\n\nEnter "plot" to see the columns behavior.\nEnter "graph" to see the Differences of Means distribution.\nEnter "next" to analyze another two columns in the same file.\nEnter "ya" to quit the program.\n\n'
+            print 'KEYWORDS:\n\nEnter "plot" to see the columns behavior.\nEnter "graph" to see the Differences of Means distribution.\nEnter "next" to analyze another two columns.\nEnter "ya" to quit the program.\n\n'
             user = raw_input('Enter keyword: ')
             hands = str(user)
             print ' '
