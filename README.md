@@ -113,7 +113,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
 <img src="https://user-images.githubusercontent.com/22894897/30762494-94002e6a-9fb8-11e7-833c-cde847c021d3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30762497-964f8ba2-9fb8-11e7-9b08-122380dc0beb.png" width=50%/><br>
 <br>
 
-- <a href="https://github.com/lastralab/Statistics/blob/master/ANowoa.py"><b>Anowoa.py</b></a> (Error: Not recognizing integers)<br><br>
+- <a href="https://github.com/lastralab/Statistics/blob/master/ANowoa.py"><b>Anowoa.py</b></a> (New pandas index error)<br><br>
   - Performs Analysis of Variance (ANOVA), one or two ways (optional) <br> 
   - Returns Analysis of Variance between two or more group means <br>
   - Returns Degrees of Freedom, Sum of Squares, Mean Square <br>
