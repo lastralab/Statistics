@@ -45,7 +45,7 @@ while True:
     print ' '
     column = raw_input('Enter column header: ')
     print ' '
-    if column == '':
+    if (column == '') | (column == 'ya'):
         break
     hand = str(column)
     puntos = data[hand]

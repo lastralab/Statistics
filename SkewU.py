@@ -11,6 +11,7 @@ from sklearn import preprocessing
 from scipy.stats import skew
 import numpy as np
 import seaborn
+import re
 
 print ' '
 print ' '
@@ -50,17 +51,19 @@ while True:
     fh = raw_input('Enter column header: ')
     
     column = str(fh)
-    
-    # Just in case, replace Missing Values with zero:
-    
-    data[column].fillna(0,inplace=True)
-    
-    print 'Missing values replaced with zeros.'
-    print ' '
-    
-    if column == '':
+
+    if (column == '') | (column == 'ya'):
         break
+    
+
     else:
+
+        # Just in case, replace Missing Values with zero:
+    
+        data[column].fillna(0,inplace=True)
+    
+        print 'Missing values replaced with zeros.'
+        print ' '
         
         Col = preprocessing.scale(data[column]) 
         
