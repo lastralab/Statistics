@@ -12,6 +12,7 @@ from scipy import stats
 from scipy.stats import norm
 import scipy.stats as st
 import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
 import re
 import seaborn
 import scipy.stats
