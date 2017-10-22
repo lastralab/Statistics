@@ -45,7 +45,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns confidence interval
   - Returns acceptance/rejection of the null hypothesis.
    <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30881591-b63e3a86-a2dc-11e7-863f-26fe1a2a848e.png" width=50%/><br>
+<img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30881591-b63e3a86-a2dc-11e7-863f-26fe1a2a848e.png" width=50%/><br><iframe width="560" height="315" src="https://www.youtube.com/embed/9Pwv8aufj4s?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
   <br>
   
 - <a href="https://github.com/lastralab/Statistics/blob/master/DepT-test.py"><b>DepT-test</b></a><br>
