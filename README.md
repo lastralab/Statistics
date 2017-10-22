@@ -45,7 +45,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns confidence interval
   - Returns acceptance/rejection of the null hypothesis.
    <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30881591-b63e3a86-a2dc-11e7-863f-26fe1a2a848e.png" width=50%/><br><p><a href="https://www.youtube.com/embed/9Pwv8aufj4s?rel=0&amp;showinfo=0">Demo here</a>.
+<img src="https://user-images.githubusercontent.com/22894897/30722723-2ffa7ec0-9f09-11e7-8fb4-38d9f12c1061.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30881591-b63e3a86-a2dc-11e7-863f-26fe1a2a848e.png" width=50%/><br><a href="https://www.youtube.com/watch?v=9Pwv8aufj4s">Demo here</a>.
   <br>
   
 - <a href="https://github.com/lastralab/Statistics/blob/master/DepT-test.py"><b>DepT-test</b></a><br>
@@ -57,7 +57,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns acceptance/rejection of the null hypothesis
   - Returns confidence interval
    <br><br>
-<img src="https://user-images.githubusercontent.com/22894897/30747470-c444ecbc-9f83-11e7-8d5f-272e473878e3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747472-c662db76-9f83-11e7-8892-4f998ad1710a.png" width=50%/><br>
+<img src="https://user-images.githubusercontent.com/22894897/30747470-c444ecbc-9f83-11e7-8d5f-272e473878e3.png" width=50%/><img src="https://user-images.githubusercontent.com/22894897/30747472-c662db76-9f83-11e7-8892-4f998ad1710a.png" width=50%/><br><a href="https://www.youtube.com/watch?v=AbiF3tuYQTM">Demo here</a>.
   <br>
   
 - <a href="https://github.com/lastralab/Statistics/blob/master/ConverS.py"><b>ConverS.py</b></a><br>
