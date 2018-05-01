@@ -70,6 +70,7 @@ The main **INSTRUCTIONS** for the programs are very simple:
   - Returns minimum and maximum
   - Returns factors for that range
   - Returns new file with data split by intervals
+  - Returns frequency and cumulative frecuency for values in those intervals.
 <br><br>
 <img src="https://user-images.githubusercontent.com/22894897/30775730-ddb76822-a06f-11e7-907a-4b892353f880.png" width=50% height=350px/><img src="https://user-images.githubusercontent.com/22894897/30775757-7f0a2d18-a070-11e7-93d8-eae1feef4574.png" width=50% height=350px/><br><br>  
 
