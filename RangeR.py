@@ -27,7 +27,7 @@ if fhand == '':
     exit()
 
 filecsv = str(fhand)
-    
+
 data = pd.read_csv(filecsv)
 
 print ' '
@@ -40,7 +40,6 @@ columns = np.asarray(colist)
 while True:
 
     print 'Columns in', re.findall('(.+?).csv', filecsv), 'are:\n'
-    print ' '
     print columns
     print ' '
     column = raw_input('Enter column header: ')
@@ -49,10 +48,10 @@ while True:
         break
     hand = str(column)
     puntos = data[hand]
-    
+
     puntajes = np.asarray(puntos)
     largo = len(puntajes)
-    
+
     minimo = min(puntos)
     maximo = max(puntos)
     space = maximo - minimo
@@ -61,7 +60,7 @@ while True:
     print 'Max =', maximo
     print 'Length =', space
     print ' '
-    
+
     def factors(x):
        facts = list()
 
@@ -70,7 +69,7 @@ while True:
            if x % i == 0:
                facts.append(i)
        print facts
-               
+
     num = int(space)
     factors(num)
     print ' '
@@ -81,10 +80,10 @@ while True:
     divisor = int(numero)
 
     start = minimo
-    stop = maximo + 1
+    stop = maximo + divisor
     step = space / divisor
 
-    Ranges = np.arange(start, stop, step, dtype=float)
+    Ranges = np.arange(start, stop, step + 1, dtype=float)
 
     print ' '
     print 'Intervals =', Ranges
@@ -93,7 +92,7 @@ while True:
     print 'Range =', spacer
     print '------------------------------------'
     print ' '
-    
+
     scoresD = list()
     scores = list()
 
@@ -105,153 +104,153 @@ while True:
         punts = float(line)
         scoresD.append(punts)
 
-    for value in scoresD : 
+    for value in scoresD :
         scores.append(float(value))
 
     while True:
-        
+
         for score in scores:
-            
+
             value = float(score)
-  
+
             try:
                 if Ranges[0] <= value <= Ranges[1]:
                     val = 1
                     newValues.append(val)
-                    
+
                     total = total +1
 
                 elif Ranges[1]< value <= Ranges[2]:
                     val = 2
                     newValues.append(val)
-        
+
                     total = total +1
 
                 elif Ranges[2]< value <= Ranges[3]:
                     val = 3
                     newValues.append(val)
-                    
+
                     total = total +1
-                    
-                elif Ranges[3] < value <= Ranges[4]: 
+
+                elif Ranges[3] < value <= Ranges[4]:
                     val = 4
                     newValues.append(val)
-          
+
                     total = total +1
 
                 elif Ranges[4] < value <= Ranges[5]: # Up to 5 intervals
                     val = 5
                     newValues.append(val)
-            
+
                     total = total + 1
-                    
+
                 elif Ranges[5] < value <= Ranges[6]:
                     val = 6
                     newValues.append(val)
-            
+
                     total = total + 1
-                    
-                elif Ranges[6] < value <= Ranges[7]: 
+
+                elif Ranges[6] < value <= Ranges[7]:
                     val = 7
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[7] < value <= Ranges[8]:
                     val = 8
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[8] < value <= Ranges[9]:
                     val = 9
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[9] < value <= Ranges[10]: # Up to 10 intervals
                     val = 10
                     newValues.append(val)
-                    
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[10] < value <= Ranges[11]:
                     val = 11
                     newValues.append(val)
 
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[11] < value <= Ranges[12]:
                     val = 12
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[12] < value <= Ranges[13]:
                     val = 13
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[13] < value <= Ranges[14]:
                     val = 14
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[14] < value <= Ranges[15]: # Up to 15 intervals
                     val = 15
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[15] < value <= Ranges[16]:
                     val = 16
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[16] < value <= Ranges[17]:
                     val = 17
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[17] < value <= Ranges[18]:
                     val = 18
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[18] < value <= Ranges[19]:
                     val = 19
                     newValues.append(val)
-            
+
                     total = total + 1
-                
-                    
+
+
                 elif Ranges[19] < value <= Ranges[20]: # Up to 20 intervals you greedy
                     val = 20
                     newValues.append(val)
-            
+
                     total = total + 1
 
                 else:
                     print 'Value not assigned:', value
                     continue
-                
+
             except IndexError:
                 pass
         break
@@ -259,7 +258,7 @@ while True:
     print ' '
     print 'RangeR succesfully implemented!'
     print "Number of values that weren't assigned =", len(scores) - total
-    print ' '   
+    print ' '
 
     nfile = open('Ranged.csv', 'w')
 
@@ -270,9 +269,35 @@ while True:
 
     nfile.close()
 
-    print 'File created as "Ranged.csv"'
+    freq = list()
+    total = list()
+
+    for value in newValues:
+        val = int(value)
+        string = str(val)+" = "+ str(newValues.count(val))
+        freq.append(string)
+
     print ' '
-    
+    print 'Frecuency of values per interval:\n'
+    freqs = set(freq)
+    uniques = sorted(freqs)
+    for unique in uniques:
+        print unique, '\n'
+        vals = unique.split(' = ')
+        total.append(int(vals[1]))
+
+    print 'Sum of frequencies =', sum(total), '\n'
+
+    print 'Cumulative Frequency:\n'
+    sum = 0
+    for unique in uniques:
+        vals = unique.split(' = ')
+        sum = sum + int(vals[1])
+        print str(vals[0])+" = "+str(sum)+'\n'
+
+
+    print 'File created as "Ranged.csv", thank you for trusting this program.\n'
+
 print ' '
 print "Baur baur"
 print ' '
